@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="az">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script>try{var t=localStorage.getItem("dk-theme")||(matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light");document.documentElement.dataset.theme=t}catch(e){document.documentElement.dataset.theme="light"}</script>
+  <script>(function(){var d=document.documentElement;if(!/[?&]intro=0/.test(location.search)&&!matchMedia("(prefers-reduced-motion: reduce)").matches){d.classList.add("is-loading");setTimeout(function(){d.classList.remove("is-loading")},2500)}})()</script>
+  <title>Kamin — Deluxe Kamin</title>
+  <meta name="description" content="Kamin haqqında ətraflı: ölçülər, qiymətlər, texniki göstəricilər. Rəsmi zəmanət, quraşdırma və servis. Deluxe Kamin, Bakı.">
+  <link rel="icon" href="https://deluxekamin.com/wp-content/uploads/2022/03/cropped-favicon-1-32x32.png">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body data-page="kaminler" class="store-page">
+
+  <main class="pd" id="pd">
+    <div class="wrap pd__crumb"><a href="kaminler.html">‹ Kaminlər</a><span id="pdCrumbType"></span></div>
+
+    <section class="wrap pd__top">
+      <div class="pd__gallery">
+        <div class="pd__stage" id="pdStage"></div>
+        <div class="pd__thumbs" id="pdThumbs"></div>
+      </div>
+
+      <div class="pd__info">
+        <p class="pd__brand" id="pdBrand"></p>
+        <h1 class="pd__name" id="pdName"></h1>
+        <p class="pd__sub" id="pdSub"></p>
+        <div class="pd__price" id="pdPrice"></div>
+        <p class="pd__tags" id="pdTags"></p>
+
+        <div class="pd__variants" id="pdVariantsWrap">
+          <h2 class="pd__vh">Ölçünü seçin</h2>
+          <div class="pd__vlist" id="pdVariants"></div>
+        </div>
+
+        <div class="pd__ctas">
+          <a class="pb pb--1" id="pdWa" href="#" target="_blank" rel="noopener">WhatsApp-da qiymət soruş</a>
+          <a class="pb pb--2" href="index.html#showroom">Showroom-da baxın</a>
+        </div>
+        <p class="pd__assure">Rəsmi zəmanət · Quraşdırma · Servis</p>
+        <p class="pd__note">Qiymətlər ƏDV-siz göstərilib və dəyişə bilər. Dəqiq təklif üçün yazın.</p>
+      </div>
+    </section>
+
+    <section class="wrap pd__block" id="pdAbout">
+      <h2 class="pd__h">Əsas xüsusiyyətlər</h2>
+      <p class="pd__desc" id="pdDesc"></p>
+      <ul class="pd__feats" id="pdFeats"></ul>
+    </section>
+
+    <section class="wrap pd__block" id="pdSpecsWrap">
+      <h2 class="pd__h">Texniki göstəricilər</h2>
+      <dl class="pd__specs" id="pdSpecs"></dl>
+    </section>
+
+    <section class="shelf" id="pdMore">
+      <div class="wrap"><h2 class="shelf__h" id="pdMoreH">Oxşar modellər</h2></div>
+      <div class="shelf__row" id="pdMoreRow"></div>
+    </section>
+  </main>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="assets/js/data.js"></script>
+  <script src="assets/js/details.js"></script>
+  <script src="assets/js/kamin.js"></script>
+  <script src="assets/js/i18n.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
