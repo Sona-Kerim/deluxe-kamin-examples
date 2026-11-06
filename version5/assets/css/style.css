@@ -1588,3 +1588,44 @@ a, a:hover { text-decoration: none !important; }
 .nav__item.has-drop:hover > .nav__link::after, .nav__item.has-drop.is-forced > .nav__link::after { transform: translateY(2px) rotate(225deg); opacity: .9; }
 @media (prefers-reduced-motion: reduce) { .drop .mtile, .drop li, .drop .mega__feature { opacity: 1 !important; transform: none !important; } }
 .mega__feature .mega__ftxt { position: absolute; left: 18px; right: 18px; bottom: 16px; top: auto; text-shadow: 0 1px 12px rgba(0,0,0,.35); }
+
+/* =====================================================================
+   Mobil uyğunluq düzəlişləri (390px yoxlamasından sonra)
+   ===================================================================== */
+body { max-width: 100%; }
+img, video, iframe { max-width: 100%; }
+@media (max-width: 900px) {
+  .pd__top, .cat, .pt__showin, .diff__grid { grid-template-columns: minmax(0, 1fr); }
+  .pd__info, .pd__gallery, .cat__main { min-width: 0; }
+  .pd__ctas .pb { flex: 1 1 auto; text-align: center; }
+}
+@media (max-width: 860px) {
+  .ptiles__grid { grid-template-columns: minmax(0, 1fr); }
+}
+@media (max-width: 480px) {
+  .pd__crumb { padding-top: 16px; font-size: 13px; }
+  .pd__top { padding-top: 14px; gap: 22px; }
+  .pd__stage { border-radius: 16px; }
+  .pd__thumbs button { flex-basis: 64px; height: 50px; }
+  .pd__name { font-size: 34px; }
+  .pd__sub { font-size: 18px; }
+  .pd__price b { font-size: 26px; }
+  .pd__vlist { gap: 8px; }
+  .pd__vlist button { padding: 12px 14px; }
+  .pd__ctas { flex-direction: column; }
+  .pd__ctas .pb { width: 100%; padding: 14px 20px; }
+  .pd__desc { font-size: 17px; }
+  .pd__feats li { padding: 18px 20px; font-size: 16px; }
+  .pd__specs div { padding: 12px 14px; }
+  .pd__specs dt, .pd__specs dd { font-size: 14px; }
+}
+.lang--m { align-self: flex-start; }
+/* kataloq yan paneli scroll zamanı həmişə görünür */
+@media (min-width: 901px) {
+  .cat { align-items: start; }
+  .cat__side { position: sticky; top: calc(var(--hdr) + 16px); align-self: start; }
+  .cat__sheet { max-height: calc(100vh - var(--hdr) - 32px); overflow-y: auto; overscroll-behavior: contain; }
+}
+
+/* neytral palitra: qırmızı parıltılar yoxdur */
+section.dark::before, .x3d__stage::before { display: none !important; }
