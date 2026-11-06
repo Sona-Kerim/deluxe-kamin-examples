@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="az">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Deluxe Kamin — Kaminlər və Baca Sistemləri</title>
+  <meta name="description" content="Elektrik, qaz, odunlu və bioetanol kaminlər, keramik və paslanmaz polad baca sistemləri. 1997-ci ildən Deluxe Kamin.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,600;1,9..144,300;1,9..144,400&family=Inter+Tight:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="topbar">
+    <div class="wrap topbar__inner">
+      <span>ISO 9001 sertifikatlı · 1997-ci ildən</span>
+      <span><a href="tel:+994124494130">012 449 41 30</a> · <a href="tel:+994502520216">050 252 02 16</a></span>
+    </div>
+  </div>
+
+  <header class="header" id="header">
+    <div class="wrap header__inner">
+      <a href="#" class="logo">Deluxe<i>Kamin</i></a>
+      <nav class="nav" id="nav">
+        <a href="#secim">Kaminlər</a>
+        <a href="#baca">Baca sistemləri</a>
+        <a href="#brendler">Brendlər</a>
+        <a href="#jurnal">Jurnal</a>
+      </nav>
+      <a href="#elaqe" class="btn btn--dark">Təklif alın</a>
+      <button class="burger" id="burger" aria-label="Menyu">Menyu</button>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero wrap">
+    <div class="hero__text">
+      <p class="kicker fade">Prestij kaminlə başlar</p>
+      <h1 class="hero__title fade">İstilik<br><i>dizaynla</i><br>tanış olur.</h1>
+      <p class="hero__lead fade">Elektrikdən odunluya, bioetanoldan mərmər portala qədər: məkanınıza uyğun kamini və onu təhlükəsiz edən baca sistemini bir yerdə tapın.</p>
+      <div class="hero__actions fade">
+        <a href="#secim" class="btn btn--terra">Kaminimi seçim</a>
+        <a href="#baca" class="link-arrow">Baca sistemləri</a>
+      </div>
+    </div>
+
+    <div class="hero__art fade" aria-hidden="true">
+      <div class="arch">
+        <div class="arch__wall"></div>
+        <div class="fireplace">
+          <div class="fireplace__mantel"></div>
+          <div class="fireplace__box">
+            <div class="fire">
+              <span></span><span></span><span></span><span></span><span></span>
+            </div>
+            <div class="wood"></div>
+          </div>
+        </div>
+        <div class="arch__floor"></div>
+      </div>
+      <div class="chip chip--a"><b>17</b> beynəlxalq brend</div>
+      <div class="chip chip--b"><b>1997</b> ildən bəri</div>
+    </div>
+  </section>
+
+  <div class="ticker" aria-hidden="true">
+    <div class="ticker__track">
+      <span>Elektrik kaminlər</span><span>Qaz kaminlər</span><span>Odunlu kaminlər</span><span>Bioetanol</span><span>Bağ kaminləri</span><span>Mərmər portal</span><span>Keramik baca</span><span>Paslanmaz polad baca</span>
+      <span>Elektrik kaminlər</span><span>Qaz kaminlər</span><span>Odunlu kaminlər</span><span>Bioetanol</span><span>Bağ kaminləri</span><span>Mərmər portal</span><span>Keramik baca</span><span>Paslanmaz polad baca</span>
+    </div>
+  </div>
+
+  <!-- FUEL SELECTOR -->
+  <section class="section wrap" id="secim">
+    <header class="section__head fade">
+      <p class="kicker">Kamin bələdçisi</p>
+      <h2 class="h2">Hansı kamin <i>sizə</i> uyğundur?</h2>
+    </header>
+
+    <div class="selector fade">
+      <div class="selector__list" role="tablist">
+        <button class="sel is-active" data-fuel="electric"><span>01</span>Elektrik</button>
+        <button class="sel" data-fuel="gas"><span>02</span>Qaz</button>
+        <button class="sel" data-fuel="wood"><span>03</span>Odunlu</button>
+        <button class="sel" data-fuel="bio"><span>04</span>Bioetanol</button>
+      </div>
+
+      <div class="selector__panel" id="fuelPanel">
+        <div class="panel__top">
+          <h3 id="fTitle">Elektrik kaminlər</h3>
+          <span class="badge" id="fChimney">Baca tələb olunmur</span>
+        </div>
+        <p id="fDesc"></p>
+        <p class="panel__ideal"><b>İdealdır:</b> <span id="fIdeal"></span></p>
+        <div class="bars" id="fBars"></div>
+        <div class="panel__brands" id="fBrands"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- STYLES / COLLECTION -->
+  <section class="section section--sand">
+    <div class="wrap">
+      <header class="section__head section__head--split fade">
+        <h2 class="h2">Kolleksiyalar</h2>
+        <p>Kreativ harmoniyadan klassik zərifliyə qədər: hər interyer üçün düşünülmüş həllər.</p>
+      </header>
+      <div class="collection">
+        <a href="#" class="tile tile--lg fade" style="--c:#2b211c">
+          <div class="tile__art tile__art--hanging"></div>
+          <div class="tile__txt"><span>Kreativ harmoniya</span><h3>Mərkəzi və asma kaminlər</h3></div>
+        </a>
+        <a href="#" class="tile fade" style="--c:#c2562e">
+          <div class="tile__art tile__art--classic"></div>
+          <div class="tile__txt"><span>Lüks dizayn</span><h3>Klassik kaminlər</h3></div>
+        </a>
+        <a href="#" class="tile fade" style="--c:#6b7b62">
+          <div class="tile__art tile__art--garden"></div>
+          <div class="tile__txt"><span>Estetika &amp; funksiya</span><h3>Bağ kaminləri</h3></div>
+        </a>
+        <a href="#" class="tile tile--wide fade" style="--c:#d8cbb8">
+          <div class="tile__art tile__art--marble"></div>
+          <div class="tile__txt tile__txt--dark"><span>Fərdi ölçüdə</span><h3>Mərmər portallar</h3></div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- BACA -->
+  <section class="section wrap" id="baca">
+    <header class="section__head fade">
+      <p class="kicker">Baca sistemləri</p>
+      <h2 class="h2">Gözəl alov <i>düzgün bacadan</i> başlayır.</h2>
+    </header>
+
+    <div class="compare">
+      <article class="cmp fade">
+        <div class="cmp__icon cmp__icon--ceramic"></div>
+        <h3>Keramik baca sistemləri</h3>
+        <p>Yeni tikililər və villalar üçün. Modul strukturlu, üç qatlı, yüksək istilik və kondensata davamlı.</p>
+        <ul>
+          <li>Turşuya davamlı keramik daxili boru</li>
+          <li>Mineral yun izolyasiya</li>
+          <li>Yüngül beton xarici blok</li>
+          <li>Bütün yanacaq növləri ilə uyğun</li>
+        </ul>
+        <div class="cmp__brands">Schiedel</div>
+      </article>
+      <article class="cmp cmp--alt fade">
+        <div class="cmp__icon cmp__icon--steel"></div>
+        <h3>Paslanmaz polad baca sistemləri</h3>
+        <p>Mövcud binalar və sürətli layihələr üçün. İkiqat divarlı, izolyasiyalı, daxildə və ya fasadda quraşdırılır.</p>
+        <ul>
+          <li>İkiqat divarlı izolyasiyalı borular</li>
+          <li>Sürətli və təmiz montaj</li>
+          <li>Fasad üzərində estetik görünüş</li>
+          <li>Tüstü sorucu ilə inteqrasiya</li>
+        </ul>
+        <div class="cmp__brands">Poujoulat Therminox · Exodraft · Solinox</div>
+      </article>
+    </div>
+
+    <div class="process">
+      <div class="process__sticky fade">
+        <p class="kicker">Quraşdırma prosesi</p>
+        <h3 class="h3">Beş addımda<br><i>təhlükəsiz baca</i></h3>
+        <div class="process__meter"><span id="meter"></span></div>
+      </div>
+      <ol class="process__steps" id="steps">
+        <li class="pstep"><b>01</b><div><h4>Yerində ölçü və analiz</h4><p>Binanın quruluşu, hündürlüyü və kaminin yeri dəqiq ölçülür.</p></div></li>
+        <li class="pstep"><b>02</b><div><h4>Çəkiş hesablaması</h4><p>Baca diametri və hündürlüyü kaminin gücünə görə hesablanır.</p></div></li>
+        <li class="pstep"><b>03</b><div><h4>Material seçimi</h4><p>Layihəyə görə keramik və ya paslanmaz polad sistem təklif olunur.</p></div></li>
+        <li class="pstep"><b>04</b><div><h4>Peşəkar montaj</h4><p>Sertifikatlı komandamız standartlara uyğun quraşdırma aparır.</p></div></li>
+        <li class="pstep"><b>05</b><div><h4>Test və təhvil</h4><p>Çəkiş və sızdırmazlıq yoxlanılır, zəmanətlə təhvil verilir.</p></div></li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- MISSION -->
+  <section class="mission">
+    <div class="wrap fade">
+      <p class="kicker kicker--light">Biz kimik?</p>
+      <blockquote>“Həyat keyfiyyətini dünya estetik trendləri ilə birləşdirir, hər layihədə tərəfdaşlarımızın məmnuniyyətini qazanırıq.”</blockquote>
+      <div class="mission__values">
+        <span>Şəffaflıq</span><span>Etibarlılıq</span><span>Güvən</span><span>Davamlı inkişaf</span><span>Həll yönümlülük</span><span>Yaradıcılıq</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- BRANDS -->
+  <section class="section wrap" id="brendler">
+    <header class="section__head section__head--split fade">
+      <h2 class="h2">Rəsmi <i>distribütoru</i> olduğumuz brendlər</h2>
+      <p>Uzunmüddətli tərəfdaşlıq və orijinal məhsul zəmanəti.</p>
+    </header>
+    <div class="brands fade">
+      <span>Dimplex</span><span>Spartherm</span><span>Schiedel</span><span>Planika</span><span>Exodraft</span><span>Cinier</span>
+      <span>Flameline</span><span>JC Bordelet</span><span>Invicta</span><span>Faber</span><span>Solinox</span><span>Maxitrol</span>
+      <span>Italkero</span><span>Totem</span><span>A Caminetti</span><span>Kratki</span><span>Comex</span><span class="brands__more">+ daha çox</span>
+    </div>
+  </section>
+
+  <!-- JOURNAL -->
+  <section class="section section--sand" id="jurnal">
+    <div class="wrap">
+      <header class="section__head section__head--split fade">
+        <h2 class="h2">Jurnal</h2>
+        <a href="#" class="link-arrow">Bütün yazılar</a>
+      </header>
+      <div class="journal">
+        <a href="#" class="entry fade"><div class="entry__art entry__art--1"></div><span>Baca · 4 dəq</span><h3>Bacanın kamin sistemində rolu</h3></a>
+        <a href="#" class="entry fade"><div class="entry__art entry__art--2"></div><span>Bioetanol · 3 dəq</span><h3>Biokamin nədir və necə işləyir?</h3></a>
+        <a href="#" class="entry fade"><div class="entry__art entry__art--3"></div><span>Elektrik · 3 dəq</span><h3>Elektrik kaminlərin üstünlükləri</h3></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="contact" id="elaqe">
+    <div class="wrap contact__inner">
+      <div class="fade">
+        <h2 class="h2">Gəlin, <i>sizin</i> kaminizi<br>birlikdə seçək.</h2>
+        <p class="contact__lead">Pulsuz konsultasiya üçün məlumatlarınızı yazın, mütəxəssisimiz WhatsApp vasitəsilə sizinlə əlaqə saxlayacaq.</p>
+        <div class="contact__phones">
+          <a href="tel:+994124494130">012 449 41 30</a>
+          <a href="https://wa.me/994502520216" target="_blank" rel="noopener">WhatsApp: 050 252 02 16</a>
+        </div>
+      </div>
+      <form class="form fade" id="leadForm">
+        <input name="name" placeholder="Adınız" required>
+        <input name="phone" type="tel" placeholder="Telefon nömrəniz" required>
+        <div class="chips" id="interest">
+          <label><input type="radio" name="interest" value="Kamin" checked><span>Kamin</span></label>
+          <label><input type="radio" name="interest" value="Baca sistemi"><span>Baca sistemi</span></label>
+          <label><input type="radio" name="interest" value="Kamin + baca"><span>Kamin + baca</span></label>
+          <label><input type="radio" name="interest" value="Mərmər portal"><span>Mərmər portal</span></label>
+        </div>
+        <textarea name="note" rows="3" placeholder="Qısa qeyd (məkan, ölçü və s.)"></textarea>
+        <button class="btn btn--terra" type="submit">Göndər →</button>
+      </form>
+    </div>
+  </section>
+
+  <footer class="footer wrap">
+    <a href="#" class="logo">Deluxe<i>Kamin</i></a>
+    <nav>
+      <a href="https://www.instagram.com/deluxe_kamin_perila_kovka" target="_blank" rel="noopener">Instagram</a>
+      <a href="https://www.facebook.com/deluxekaminperilakovka" target="_blank" rel="noopener">Facebook</a>
+      <a href="https://www.youtube.com/@deluxekaminperilakovka" target="_blank" rel="noopener">YouTube</a>
+      <a href="https://www.pinterest.com/deluxe_kamin_perila_kovka" target="_blank" rel="noopener">Pinterest</a>
+    </nav>
+    <span>© 2004–2026 Deluxe Kamin &amp; Perila</span>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
