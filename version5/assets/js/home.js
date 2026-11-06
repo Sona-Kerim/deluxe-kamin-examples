@@ -19,10 +19,10 @@
     var w = window.innerWidth, h = window.innerHeight;
     if (w >= 1000) {
       var txt = introEl.getBoundingClientRect();
-      return { sx: (txt.right + w) / 2 - w / 2, sy: -h * 0.18, zoom: h < 700 ? 0.86 : 0.76 };
+      return { sx: (txt.right + w) / 2 - w / 2, sy: -h * 0.24, zoom: h < 700 ? 1 : 0.88 };
     }
     var bottom = 0;
-    introEl.querySelectorAll('.ctas, .x3d__sub').forEach(function (b) { bottom = Math.max(bottom, b.getBoundingClientRect().bottom); });
+    introEl.querySelectorAll('.ctas, .x3d__slogan').forEach(function (b) { bottom = Math.max(bottom, b.getBoundingClientRect().bottom); });
     var region = h - bottom - 40;
     return { sx: 0, sy: bottom + region * 0.52 - h * 0.66, zoom: Math.min(1.9, Math.max(1, (h * 0.42) / Math.max(region, 120))) };
   }
@@ -109,10 +109,11 @@
       .to('[data-hero]', { opacity: 1, y: 0, duration: 0.9, stagger: 0.08 }, 0.35);
   });
 
-  // 3D hekayə — səhnə yerində qalır, scroll prosesi idarə edir
-  var calls = document.querySelectorAll('.x3d__call, .x3d__outro');
+  // 3D hekayə — scroll-dan asılı deyil: səhifə açılanda öz-özünə oynayır və təkrarlanır
+  x3d.classList.add('x3d--auto');
+  var calls = document.querySelectorAll('.x3d__call');
   function band(p, a, b) {
-    var fade = 0.05;
+    var fade = 0.04;
     if (p < a - fade || p > b + fade) return 0;
     if (p < a) return (p - (a - fade)) / fade;
     if (p > b) return 1 - (p - b) / fade;
@@ -121,31 +122,29 @@
   var forcedP = location.search.match(/[?&]p=([\d.]+)/);   // yoxlama üçün: ?p=0.65
   function updateX3d(p) {
     if (forcedP) p = parseFloat(forcedP[1]);
-    if (hero) {
-      hero.setProgress(p);
-      var k = Math.min(1, p / 0.14); k = k * k * (3 - 2 * k);
-      hero.setFrame({ sx: bf.sx * (1 - k), sy: bf.sy * (1 - k), zoom: 1 + (bf.zoom - 1) * (1 - k) });
-    }
-    var io = 1 - Math.min(1, p / 0.12);
-    introEl.style.opacity = io;
-    introEl.style.transform = 'translateY(' + (-40 * (1 - io)) + 'px)';
-    introEl.style.visibility = io <= 0.01 ? 'hidden' : 'visible';
+    if (hero) hero.setProgress(p);
     calls.forEach(function (c) {
       var o = band(p, parseFloat(c.dataset.in), parseFloat(c.dataset.out));
       c.style.opacity = o;
-      c.style.transform = 'translateY(' + (20 * (1 - o)) + 'px)';
-      c.style.pointerEvents = o > 0.6 ? 'auto' : 'none';
+      c.style.transform = 'translateY(' + (12 * (1 - o)) + 'px)';
     });
-    $('x3dHint').style.opacity = 1 - Math.min(1, p / 0.05);
     $('x3dBar').style.transform = 'scaleX(' + p + ')';
   }
-  var shot = /[?&]shot=1/.test(location.search);   // yoxlama screenshot-ları üçün sabit hündürlüklər
+  var shot = /[?&]shot=1/.test(location.search);
   if (shot) document.documentElement.classList.add('shot');
-  else ScrollTrigger.create({
-    trigger: x3d, start: 'top top', end: '+=340%', pin: '.x3d__stage', scrub: true, anticipatePin: 1,
-    onUpdate: function (self) { updateX3d(self.progress); }
-  });
-  if (forcedP) DK.ready.then(function () { updateX3d(0); });
+  var play = { p: 0 };
+  var story = gsap.timeline({ paused: true, repeat: -1 })
+    .to(play, { p: 1, duration: 16, ease: 'none', onUpdate: function () { updateX3d(play.p); } })
+    .to({}, { duration: 2.5 })                                  // sonda bütöv sistem görünür
+    .call(function () { updateX3d(0); })                        // kamin yumşaq başlanğıca qayıdır
+    .to({}, { duration: 2 });
+  updateX3d(0);
+  if (!forcedP) DK.ready.then(function () { setTimeout(function () { story.play(); }, 900); });
+  // ekrandan çıxanda dayanır, qayıdanda davam edir
+  new IntersectionObserver(function (en) {
+    if (forcedP || story.time() === 0 && !story.isActive() && !story.progress()) return;
+    if (en[0].isIntersecting) story.resume(); else story.pause();
+  }, { threshold: 0.2 }).observe(x3d);
 
   // plitələr: foto yaxınlaşaraq açılır, yazı yuxarı qalxır
   gsap.utils.toArray('.fp').forEach(function (t) {
