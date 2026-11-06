@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="az">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script>try{var t=localStorage.getItem("dk-theme")||(matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light");document.documentElement.dataset.theme=t}catch(e){document.documentElement.dataset.theme="light"}</script>
+  <script>(function(){var d=document.documentElement;if(!/[?&]intro=0/.test(location.search)&&!matchMedia("(prefers-reduced-motion: reduce)").matches){d.classList.add("is-loading");setTimeout(function(){d.classList.remove("is-loading")},2500)}})()</script>
+  <title>Baca Sistemləri — Deluxe Kamin</title>
+  <meta name="description" content="Schiedel Rondo Plus keramik baca sistemləri, Poujoulat Therminox paslanmaz polad bacalar və Exodraft baca fanları. Layihə, montaj və servis.">
+  <link rel="icon" href="https://deluxekamin.com/wp-content/uploads/2022/03/cropped-favicon-1-32x32.png">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body data-page="baca" class="store-page">
+
+  <main>
+    <section class="st-head st-head--compact">
+      <div class="wrap st-head__grid">
+        <h1 class="st-title">Baca sistemləri</h1>
+        <p class="st-tag">Keramik və paslanmaz polad bacalar, baca fanları. Kaminin gücünə görə hesablayır, quraşdırır və servis edirik.</p>
+      </div>
+    </section>
+
+    <!-- Növlər (filtr kimi işləyir) -->
+    <section class="chiclets">
+      <div class="chiclets__row" id="bchiclets"></div>
+    </section>
+
+    <!-- Kataloq -->
+    <section class="st-all" id="mehsullar">
+      <span id="fanlar" class="anchor"></span>
+      <div class="wrap cat">
+        <aside class="cat__side" id="catSide" aria-label="Filtrlər">
+          <div class="cat__sheet">
+            <div class="cat__sheet-head"><b>Filtrlər</b><button type="button" class="cat__x" data-drawer-close aria-label="Bağla">×</button></div>
+            <label class="search cat__search">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg>
+              <input type="search" id="q" placeholder="Model axtar" aria-label="Model axtar">
+            </label>
+            <div id="facets"></div>
+            <button type="button" class="cat__reset" id="facetReset" hidden>Filtrləri sıfırla</button>
+            <button type="button" class="btn cat__apply" data-drawer-close><span><b id="filterApplyN">0</b> modeli göstər</span></button>
+          </div>
+          <div class="cat__dim" data-drawer-close></div>
+        </aside>
+        <div class="cat__main">
+          <div class="cat__bar">
+            <button type="button" class="cat__filterbtn" id="filterBtn">Filtrlər <b id="filterBtnN"></b></button>
+            <p class="cat__count"><b id="count">0</b> model</p>
+          </div>
+          <div class="pills" id="pills" hidden></div>
+          <div class="grid" id="grid"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Kömək -->
+    <section class="helpstrip">
+      <div class="wrap helpstrip__row">
+        <a class="helpstrip__item" href="#elaqe"><b>Yerində baxış</b><span>Binanın quruluşu, dam və bacanın keçəcəyi xətt yerində yoxlanılır. ›</span></a>
+        <a class="helpstrip__item" href="#proses"><b>Hesablama</b><span>Diametr və hündürlük kaminin gücünə və yanacaq növünə görə seçilir. ›</span></a>
+        <a class="helpstrip__item" href="#suallar"><b>Tez-tez verilən suallar</b><span>Hər kamin üçün baca lazımdır? Keramik, yoxsa polad? ›</span></a>
+      </div>
+    </section>
+
+    <section class="xsec" id="kesik">
+      <div class="wrap xsec__grid">
+        <div>
+          <p class="kicker"><b>01</b> Necə qurulub</p>
+          <h2 class="h-lg" data-split style="margin-top:20px">Bacanın içinə baxaq.</h2>
+          <p class="lead" style="margin-top:24px">Müasir baca üç qatdan ibarətdir. Hər qatın öz işi var. Sətirlərin üzərinə gəlin, sxemdə həmin qat seçiləcək.</p>
+          <div class="toggle" id="toggle">
+            <span class="toggle__pill" id="togglePill"></span>
+            <button class="is-on" data-mat="ceramic">Keramik</button>
+            <button data-mat="steel">Paslanmaz polad</button>
+          </div>
+          <ul class="xlist" id="xlist"></ul>
+        </div>
+        <div data-reveal="up">
+          <svg class="xsvg" id="xsvg" viewBox="0 0 520 520" role="img" aria-label="Baca sisteminin kəsiyi">
+            <g class="smoke"><circle cx="190" cy="34" r="8"/><circle cx="190" cy="34" r="10"/><circle cx="190" cy="34" r="7"/><circle cx="190" cy="34" r="9"/></g>
+            <polygon class="house" points="40,210 220,90 400,210"/>
+            <rect class="house" x="66" y="210" width="308" height="270"/>
+            <line class="house house--dash" x1="66" y1="345" x2="374" y2="345"/>
+            <line class="house" x1="10" y1="480" x2="450" y2="480"/>
+            <rect class="ly ly-o" x="156" y="46" width="68" height="364"/>
+            <rect class="ly ly-i" x="166" y="46" width="48" height="364"/>
+            <rect class="ly ly-l" x="176" y="46" width="28" height="364"/>
+            <line class="draft" x1="186" y1="420" x2="186" y2="50"/>
+            <line class="draft" x1="194" y1="430" x2="194" y2="50"/>
+            <rect class="cap" x="146" y="36" width="88" height="12" rx="2"/>
+            <rect class="fp" x="112" y="404" width="156" height="76"/>
+            <rect class="fp-in" x="134" y="424" width="112" height="56"/>
+            <ellipse class="flame" cx="170" cy="466" rx="11" ry="20"/>
+            <ellipse class="flame" cx="190" cy="460" rx="14" ry="27"/>
+            <ellipse class="flame" cx="210" cy="466" rx="11" ry="20"/>
+            <g class="lbl">
+              <line x1="224" y1="120" x2="290" y2="120"/><circle cx="224" cy="120" r="3"/><text x="298" y="124" id="lbl0"></text>
+              <line x1="214" y1="180" x2="290" y2="180"/><circle cx="214" cy="180" r="3"/><text x="298" y="184" id="lbl1"></text>
+              <line x1="204" y1="240" x2="290" y2="240"/><circle cx="204" cy="240" r="3"/><text x="298" y="244" id="lbl2"></text>
+            </g>
+          </svg>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sistemlər -->
+    <section class="sys">
+      <div class="wrap">
+        <article class="sys__item" id="keramik">
+          <div class="sys__media" data-reveal="img" style="background:#fff"><img src="https://deluxekamin.com/wp-content/uploads/2023/10/Schiedel-Rondo-Plus-Keramik-baca-sistemi-Deluxe.jpg" alt="Schiedel Rondo Plus keramik baca" loading="lazy" style="object-fit:contain"></div>
+          <div class="sys__body">
+            <p class="kicker"><b>02</b> Keramik baca</p>
+            <h2 class="h-lg" data-split style="margin-top:20px">Schiedel Rondo Plus</h2>
+            <p class="lead">Müxtəlif isitmə cihazları üçün turşuya davamlı, yanğın təhlükəsiz, CE işarəli keramik baca sistemi. Yeni tikililər və villalar üçün uzunömürlü həll.</p>
+            <table class="table">
+              <tr><th>Konstruksiya</th><td>Keramik daxili boru, mineral lif izolyasiya, yüngül beton xarici blok</td></tr>
+              <tr><th>Temperatur sinfi</th><td>EN 13063-1: T600 N1 D3 G100 / T400 N1 D3 G50</td></tr>
+              <tr><th>Yanacaq</th><td>Odun, pelet, hakə, taxıl, yağ və qaz</td></tr>
+              <tr><th>Diametr</th><td>16–35 sm</td></tr>
+              <tr><th>Sertifikat</th><td>CE, EN 13063-1 və EN 13063-2</td></tr>
+            </table>
+            <div class="pills"><span>Kondensata davamlı</span><span>His yanğınına davamlı</span><span>Az istifadədə də yaxşı çəkiş</span><span>45° birləşmə</span><span>Yüngül bloklar</span></div>
+            <a href="https://deluxekamin.com/schiedel-rondo-plus-keramik-baca-sistemi" class="arrow-link" target="_blank" rel="noopener">Məhsul səhifəsi <i>↗</i></a>
+          </div>
+        </article>
+
+        <article class="sys__item" id="polad">
+          <div class="sys__media" data-reveal="img"><img src="https://deluxekamin.com/wp-content/uploads/2022/06/Poujoulat-Therminox-celik-baca-sistemi.jpg" alt="Poujoulat Therminox polad baca" loading="lazy"></div>
+          <div class="sys__body">
+            <p class="kicker"><b>03</b> Paslanmaz polad baca</p>
+            <h2 class="h-lg" data-split style="margin-top:20px">Poujoulat Therminox</h2>
+            <p class="lead">İkiqat divarlı, izolyasiyalı, çoxyanacaqlı polad baca. Bina daxilində və ya xaricində quraşdırıla bilir, yeni və mövcud tikililər üçün uyğundur.</p>
+            <table class="table">
+              <tr><th>Daxili divar</th><td>316L paslanmaz polad</td></tr>
+              <tr><th>İzolyasiya</th><td>Yüksək sıxlıqlı injeksiya olunmuş mineral yun, 130 kg/m³</td></tr>
+              <tr><th>Temperatur sinfi</th><td>T450</td></tr>
+              <tr><th>Diametrlər</th><td>Ø100, Ø130, Ø150, Ø180, Ø200, Ø250</td></tr>
+              <tr><th>Yanıcı materiallara məsafə</th><td>50 mm</td></tr>
+              <tr><th>Birləşmə</th><td>Press-fit, 360° dönmə imkanı</td></tr>
+            </table>
+            <div class="pills"><span>Odun, kömür, qaz, yağ, pelet</span><span>Daxili və fasad montajı</span><span>Mövcud binalar üçün</span></div>
+            <a href="https://deluxekamin.com/therminox-baca-2/" class="arrow-link" target="_blank" rel="noopener">Məhsul səhifəsi <i>↗</i></a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Proses -->
+    <section class="proc" id="proses">
+      <div class="wrap proc__grid">
+        <div class="proc__sticky">
+          <p class="kicker"><b>05</b> Proses</p>
+          <h2 class="h-lg" data-split style="margin-top:20px">Baxışdan ilk alova qədər.</h2>
+          <p class="lead" style="margin:24px 0 32px">Baca kaminlə birlikdə planlanmalıdır. İdeal halda bu, tikinti və ya təmir mərhələsində olur.</p>
+          <a href="#elaqe" class="btn" data-magnetic><span>Baxış sifariş et</span></a>
+        </div>
+        <div class="proc__steps" id="steps">
+          <div class="proc__line"><i id="procLine"></i></div>
+          <div class="pstep"><span>Addım 01</span><h3>Yerində baxış</h3><p>Binanın quruluşu, dam, kaminin yeri və bacanın keçəcəyi xətt yerində yoxlanılır.</p></div>
+          <div class="pstep"><span>Addım 02</span><h3>Hesablama</h3><p>Kaminin çıxış diametri, yanacaq növü və bacanın hündürlüyünə görə sistem seçilir.</p></div>
+          <div class="pstep"><span>Addım 03</span><h3>Təklif</h3><p>Material, montaj müddəti və qiymət yazılı şəkildə təqdim olunur.</p></div>
+          <div class="pstep"><span>Addım 04</span><h3>Montaj</h3><p>Komandamız istehsalçının təlimatlarına və standartlara uyğun quraşdırma aparır.</p></div>
+          <div class="pstep"><span>Addım 05</span><h3>Yoxlama və təhvil</h3><p>Çəkiş və birləşmələr yoxlanılır, sistem işlək vəziyyətdə təhvil verilir.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Suallar -->
+    <section class="faq" id="suallar">
+      <div class="wrap faq__grid">
+        <div>
+          <p class="kicker"><b>06</b> Suallar</p>
+          <h2 class="h-lg" data-split style="margin-top:20px">Ən çox soruşulanlar</h2>
+        </div>
+        <div class="acc" id="faq">
+          <div class="acc__item"><button class="acc__btn" aria-expanded="false"><h3>Hər kamin üçün baca lazımdır?</h3><i class="acc__icon"></i></button><div class="acc__panel"><div class="acc__inner"><p>Xeyr. Elektrik və bioetanol kaminlər baca tələb etmir. Odunlu və qaz kaminlər üçün isə tüstü və yanma qazlarını çıxaran baca sistemi lazımdır.</p></div></div></div>
+          <div class="acc__item"><button class="acc__btn" aria-expanded="false"><h3>Keramik, yoxsa paslanmaz polad?</h3><i class="acc__icon"></i></button><div class="acc__panel"><div class="acc__inner"><p>Yeni tikilidə, bina daxilində keramik sistem uzunömürlü və möhkəm həlldir. Mövcud binada, fasadda və ya qısa müddətdə quraşdırma lazım olanda paslanmaz polad daha uyğundur.</p></div></div></div>
+          <div class="acc__item"><button class="acc__btn" aria-expanded="false"><h3>Hazır evə sonradan baca çəkmək olar?</h3><i class="acc__icon"></i></button><div class="acc__panel"><div class="acc__inner"><p>Bəli. Poujoulat Therminox binanın içində və ya xaricində, fasad boyunca quraşdırıla bilir. Konkret həll yerində baxışdan sonra müəyyən olunur.</p></div></div></div>
+          <div class="acc__item"><button class="acc__btn" aria-expanded="false"><h3>Baca fanı nə vaxt lazımdır?</h3><i class="acc__icon"></i></button><div class="acc__panel"><div class="acc__inner"><p>Baca qısa olanda, külək və ya ətraf binalar çəkişə mane olanda, kamin yandırılanda tüstü otağa qayıdanda. Fan bacanın ucuna quraşdırılır və çəkişi sabitləşdirir.</p></div></div></div>
+          <div class="acc__item"><button class="acc__btn" aria-expanded="false"><h3>Diametri necə seçirsiniz?</h3><i class="acc__icon"></i></button><div class="acc__panel"><div class="acc__inner"><p>Kamin istehsalçısının tövsiyə etdiyi çıxış diametrinə, bacanın ümumi hündürlüyünə, dönmələrin sayına və yanacaq növünə görə hesablanır.</p></div></div></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="band">
+      <div class="wrap">
+        <div class="band__box">
+          <img src="https://deluxekamin.com/wp-content/uploads/2022/05/Kamin-Arkiane-Eclypsya.jpg" alt="" loading="lazy" data-parallax="8">
+          <div class="band__content">
+            <h2 class="h-md" data-split>Baca hazırdır.<br>İndi kamini seçək.</h2>
+            <p>Elektrikdən odunluya, mərkəzi modellərdən mərmər portallara qədər 43 model.</p>
+            <a href="kaminler.html" class="btn btn--light" data-magnetic><span>Kaminlərə bax</span></a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="assets/js/data.js"></script>
+  <script src="assets/js/i18n.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/baca.js"></script>
+</body>
+</html>
