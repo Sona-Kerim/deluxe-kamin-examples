@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="az">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Deluxe Kamin — Prestij Kaminlə Başlar</title>
+  <meta name="description" content="Deluxe Kamin: 1997-ci ildən elektrik, qaz, odunlu və bioetanol kaminlər, keramik və paslanmaz polad baca sistemləri. Bakı.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="header" id="header">
+    <div class="container header__inner">
+      <a href="#" class="logo" aria-label="Deluxe Kamin">
+        <svg class="logo__mark" viewBox="0 0 32 40" aria-hidden="true">
+          <path d="M16 2c2 7 10 11 10 21a10 10 0 0 1-20 0c0-5 3-8 5-10 0 4 2 6 4 6-2-6 0-12 1-17z" fill="url(#lg)"/>
+          <defs><linearGradient id="lg" x1="0" y1="1" x2="0" y2="0"><stop offset="0" stop-color="#ff6a1a"/><stop offset="1" stop-color="#e8c47c"/></linearGradient></defs>
+        </svg>
+        <span class="logo__text"><b>DELUXE</b><small>KAMİN</small></span>
+      </a>
+      <nav class="nav" id="nav">
+        <a href="#kaminler">Kaminlər</a>
+        <a href="#baca">Baca Sistemləri</a>
+        <a href="#brendler">Brendlər</a>
+        <a href="#haqqimizda">Haqqımızda</a>
+        <a href="#elaqe">Əlaqə</a>
+      </nav>
+      <a href="tel:+994124494130" class="btn btn--ghost header__cta">012 449 41 30</a>
+      <button class="burger" id="burger" aria-label="Menyu"><span></span><span></span></button>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero">
+    <canvas id="embers" class="hero__canvas" aria-hidden="true"></canvas>
+    <div class="hero__glow" aria-hidden="true"></div>
+    <div class="container hero__inner">
+      <p class="eyebrow reveal">1997-ci ildən · Türkiyə &amp; Azərbaycan</p>
+      <h1 class="hero__title reveal">Prestij<br><em>kaminlə</em> başlar</h1>
+      <p class="hero__lead reveal">Dünyanın aparıcı brendlərindən kaminlər və mühəndislik səviyyəsində baca sistemləri. Layihədən quraşdırmaya qədər hər addım bizdədir.</p>
+      <div class="hero__actions reveal">
+        <a href="#kaminler" class="btn btn--gold">Kolleksiyaya baxın</a>
+        <a href="#baca" class="btn btn--line">Baca sistemləri →</a>
+      </div>
+    </div>
+    <div class="hero__stats container">
+      <div class="stat reveal"><b data-count="29">0</b><span>il təcrübə</span></div>
+      <div class="stat reveal"><b data-count="17">0</b><span>beynəlxalq brend</span></div>
+      <div class="stat reveal"><b>ISO</b><span>9001 sertifikatı</span></div>
+    </div>
+    <a href="#kaminler" class="scroll-hint" aria-label="Aşağı"><span></span></a>
+  </section>
+
+  <!-- KAMIN COLLECTION -->
+  <section class="section" id="kaminler">
+    <div class="container">
+      <div class="section__head reveal">
+        <p class="eyebrow">Kolleksiya</p>
+        <h2 class="section__title">Hər məkana <em>öz alovu</em></h2>
+        <p class="section__lead">Mənzil, villa və ya bağ evi üçün: yanacaq növünü seçin, qalanını bizə həvalə edin.</p>
+      </div>
+
+      <div class="cards">
+        <article class="card reveal" style="--hue:18">
+          <div class="card__visual">
+            <div class="flame"><i></i><i></i><i></i></div>
+            <span class="card__num">01</span>
+          </div>
+          <div class="card__body">
+            <h3>Elektrik kaminlər</h3>
+            <p>Baca tələb etmir, istənilən mənzilə quraşdırılır. Real alov effekti, pultla idarə.</p>
+            <ul class="tags"><li>Dimplex</li><li>Flameline</li><li>Spartherm DRU</li></ul>
+          </div>
+        </article>
+
+        <article class="card reveal" style="--hue:28">
+          <div class="card__visual">
+            <div class="flame flame--blue"><i></i><i></i><i></i></div>
+            <span class="card__num">02</span>
+          </div>
+          <div class="card__body">
+            <h3>Qaz kaminlər</h3>
+            <p>Bir düymə ilə canlı alov. Maxitrol təhlükəsizlik sistemi ilə uzaqdan idarə.</p>
+            <ul class="tags"><li>Italkero</li><li>Majestic</li><li>Maxitrol</li></ul>
+          </div>
+        </article>
+
+        <article class="card reveal" style="--hue:10">
+          <div class="card__visual">
+            <div class="flame flame--big"><i></i><i></i><i></i></div>
+            <div class="logs"></div>
+            <span class="card__num">03</span>
+          </div>
+          <div class="card__body">
+            <h3>Odunlu kaminlər</h3>
+            <p>Klassik atmosfer və maksimum istilik. Kaset və mərkəzi asma modellər.</p>
+            <ul class="tags"><li>Spartherm</li><li>Invicta</li><li>Arkiane</li></ul>
+          </div>
+        </article>
+
+        <article class="card reveal" style="--hue:40">
+          <div class="card__visual">
+            <div class="flame flame--thin"><i></i><i></i><i></i></div>
+            <span class="card__num">04</span>
+          </div>
+          <div class="card__body">
+            <h3>Bioetanol kaminlər</h3>
+            <p>Tüstüsüz, qoxusuz, ekoloji. Masaüstü və divara quraşdırılan dizayn həlləri.</p>
+            <ul class="tags"><li>Planika</li></ul>
+          </div>
+        </article>
+
+        <article class="card reveal" style="--hue:95">
+          <div class="card__visual">
+            <div class="flame"><i></i><i></i><i></i></div>
+            <span class="card__num">05</span>
+          </div>
+          <div class="card__body">
+            <h3>Bağ kaminləri</h3>
+            <p>Estetika və funksionallıq bir arada. Açıq terras və həyət üçün davamlı modellər.</p>
+            <ul class="tags"><li>Outdoor</li><li>Palazzetti</li></ul>
+          </div>
+        </article>
+
+        <article class="card reveal" style="--hue:35">
+          <div class="card__visual card__visual--marble">
+            <div class="flame"><i></i><i></i><i></i></div>
+            <span class="card__num">06</span>
+          </div>
+          <div class="card__body">
+            <h3>Mərmər portallar</h3>
+            <p>Evinizdə lüks dizayn. Fərdi ölçüdə hazırlanan Deluxe mərmər portallar.</p>
+            <ul class="tags"><li>Deluxe</li><li>Comex aksesuarlar</li></ul>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- BACA SYSTEMS -->
+  <section class="section section--dark" id="baca">
+    <div class="container baca">
+      <div class="baca__text reveal">
+        <p class="eyebrow">Mühəndislik</p>
+        <h2 class="section__title">Baca: kaminin <em>görünməyən ürəyi</em></h2>
+        <p class="section__lead">Düzgün baca effektiv yanma, təmiz hava və təhlükəsizlik deməkdir. Biz Avropa standartlarında iki sistem təklif edirik.</p>
+
+        <div class="tabs" role="tablist">
+          <button class="tab is-active" data-tab="ceramic" role="tab">Keramik baca</button>
+          <button class="tab" data-tab="steel" role="tab">Paslanmaz polad</button>
+        </div>
+
+        <div class="tab-panel is-active" data-panel="ceramic">
+          <p>Üç qatlı modul sistem: yüngül beton gövdə, mineral izolyasiya və turşuya davamlı keramik daxili boru. Onillərlə xidmət üçün nəzərdə tutulub.</p>
+          <ul class="specs">
+            <li><b>600°C+</b><span>istiliyə davamlılıq</span></li>
+            <li><b>30+ il</b><span>xidmət müddəti</span></li>
+            <li><b>Schiedel</b><span>alman keyfiyyəti</span></li>
+          </ul>
+        </div>
+        <div class="tab-panel" data-panel="steel">
+          <p>İkiqat divarlı, izolyasiyalı paslanmaz polad borular. Sürətli montaj, mövcud binalara sonradan quraşdırma üçün ideal.</p>
+          <ul class="specs">
+            <li><b>AISI 316L</b><span>paslanmaz polad</span></li>
+            <li><b>1 gün</b><span>montaj müddəti</span></li>
+            <li><b>Poujoulat</b><span>Therminox seriyası</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="baca__visual reveal">
+        <svg id="chimney" class="chimney" viewBox="0 0 420 500" aria-label="Baca sisteminin kəsiyi">
+          <!-- smoke -->
+          <g class="smoke">
+            <circle cx="170" cy="28" r="8"/><circle cx="170" cy="28" r="10"/><circle cx="170" cy="28" r="7"/><circle cx="170" cy="28" r="9"/>
+          </g>
+          <!-- house -->
+          <polygon points="30,210 200,95 370,210" class="house-line"/>
+          <rect x="55" y="210" width="290" height="260" class="house-line"/>
+          <line x1="55" y1="340" x2="345" y2="340" class="house-line house-line--soft"/>
+          <line x1="10" y1="470" x2="410" y2="470" class="house-line"/>
+          <!-- chimney layers -->
+          <rect x="140" y="40" width="60" height="365" class="ch-outer"/>
+          <rect x="149" y="40" width="42" height="365" class="ch-insul"/>
+          <rect x="158" y="40" width="24" height="365" class="ch-liner"/>
+          <rect x="132" y="30" width="76" height="12" rx="2" class="ch-cap"/>
+          <!-- fireplace -->
+          <rect x="100" y="400" width="140" height="70" class="fp-body"/>
+          <rect x="120" y="418" width="100" height="52" class="fp-opening"/>
+          <g class="fp-fire">
+            <ellipse cx="150" cy="458" rx="10" ry="18"/>
+            <ellipse cx="170" cy="452" rx="13" ry="24"/>
+            <ellipse cx="190" cy="458" rx="10" ry="18"/>
+          </g>
+          <!-- labels -->
+          <g class="labels">
+            <line x1="200" y1="120" x2="270" y2="120"/><text x="276" y="124" id="lbl1">Beton gövdə</text>
+            <line x1="191" y1="170" x2="270" y2="170"/><text x="276" y="174" id="lbl2">Mineral izolyasiya</text>
+            <line x1="182" y1="220" x2="270" y2="220"/><text x="276" y="224" id="lbl3">Keramik boru</text>
+          </g>
+        </svg>
+      </div>
+    </div>
+  </section>
+
+  <!-- MAXITROL / FEATURE BAND -->
+  <section class="band">
+    <div class="container band__inner reveal">
+      <div>
+        <p class="eyebrow">Təhlükəsizlik</p>
+        <h3>Maxitrol pultlu qaz sistemləri</h3>
+      </div>
+      <ul class="band__list">
+        <li>Termoelektrik alov qoruması</li>
+        <li>Tənzimlənən qaz axını</li>
+        <li>Pilot qaz tənzimləməsi</li>
+        <li>Kompakt dizayn</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- BRANDS -->
+  <section class="section section--tight" id="brendler">
+    <div class="container section__head reveal">
+      <p class="eyebrow">Rəsmi distribütor</p>
+      <h2 class="section__title">17 dünya brendi, <em>bir ünvan</em></h2>
+    </div>
+    <div class="marquee" aria-label="Brendlər">
+      <div class="marquee__track">
+        <span>Dimplex</span><span>Spartherm</span><span>Schiedel</span><span>Planika</span><span>Exodraft</span><span>Cinier</span><span>Flameline</span><span>JC Bordelet</span><span>Invicta</span><span>Faber</span><span>Solinox</span><span>Maxitrol</span><span>Italkero</span><span>Totem</span><span>A Caminetti</span><span>Kratki</span><span>Comex</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROCESS -->
+  <section class="section" id="haqqimizda">
+    <div class="container">
+      <div class="section__head reveal">
+        <p class="eyebrow">Necə işləyirik</p>
+        <h2 class="section__title">İdeyadan <em>ilk alova</em> qədər</h2>
+      </div>
+      <ol class="steps">
+        <li class="step reveal"><span>01</span><h4>Konsultasiya</h4><p>Məkanı, ehtiyacları və büdcəni birlikdə dəyərləndiririk.</p></li>
+        <li class="step reveal"><span>02</span><h4>Layihə &amp; ölçü</h4><p>Kamin və baca sistemi üçün texniki hesablama aparırıq.</p></li>
+        <li class="step reveal"><span>03</span><h4>Quraşdırma</h4><p>Sertifikatlı ustalarımız tərəfindən peşəkar montaj.</p></li>
+        <li class="step reveal"><span>04</span><h4>Servis</h4><p>Zəmanət və davamlı texniki dəstək.</p></li>
+      </ol>
+
+      <div class="values reveal">
+        <p>Şəffaflıq</p><p>Etibarlılıq</p><p>Güvən</p><p>Davamlı inkişaf</p><p>Həll yönümlülük</p><p>Yaradıcılıq</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- BLOG -->
+  <section class="section section--dark section--tight">
+    <div class="container">
+      <div class="section__head section__head--row reveal">
+        <div>
+          <p class="eyebrow">Bilik bazası</p>
+          <h2 class="section__title">Yenilikləri <em>kəşf edin</em></h2>
+        </div>
+        <a href="#" class="btn btn--line">Bütün məqalələr →</a>
+      </div>
+      <div class="posts">
+        <a href="#" class="post reveal"><span>Baca</span><h4>Bacanın kamin sistemində rolu</h4><p>Düzgün çəkiş niyə vacibdir və baca necə seçilir?</p></a>
+        <a href="#" class="post reveal"><span>Bioetanol</span><h4>Biokamin nədir?</h4><p>Tüstüsüz alovun üstünlükləri və istifadə qaydaları.</p></a>
+        <a href="#" class="post reveal"><span>Elektrik</span><h4>Elektrik kaminlərin üstünlükləri</h4><p>Mənzillər üçün ən praktik həll niyə elektrikdir?</p></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="section contact" id="elaqe">
+    <div class="container contact__inner">
+      <div class="reveal">
+        <p class="eyebrow">Əlaqə</p>
+        <h2 class="section__title">Evinizə <em>istilik</em> gətirək</h2>
+        <p class="section__lead">Formu doldurun, sorğunuz birbaşa WhatsApp-a yönləndiriləcək. Mütəxəssisimiz qısa zamanda cavab verəcək.</p>
+        <div class="contact__links">
+          <a href="tel:+994124494130">012 449 41 30</a>
+          <a href="tel:+994502520216">050 252 02 16</a>
+        </div>
+      </div>
+      <form class="form reveal" id="leadForm">
+        <label>Adınız<input name="name" required placeholder="Ad Soyad"></label>
+        <label>Telefon<input name="phone" required type="tel" placeholder="+994"></label>
+        <label>Maraqlandığınız
+          <select name="interest">
+            <option>Elektrik kamin</option><option>Qaz kamin</option><option>Odunlu kamin</option>
+            <option>Bioetanol kamin</option><option>Baca sistemi</option><option>Mərmər portal</option>
+          </select>
+        </label>
+        <button class="btn btn--gold" type="submit">WhatsApp ilə göndər</button>
+      </form>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <span>© 2004–2026 Deluxe Kamin &amp; Perila</span>
+      <nav>
+        <a href="https://www.instagram.com/deluxe_kamin_perila_kovka" target="_blank" rel="noopener">Instagram</a>
+        <a href="https://www.facebook.com/deluxekaminperilakovka" target="_blank" rel="noopener">Facebook</a>
+        <a href="https://www.youtube.com/@deluxekaminperilakovka" target="_blank" rel="noopener">YouTube</a>
+        <a href="https://www.linkedin.com/company/deluxekamin" target="_blank" rel="noopener">LinkedIn</a>
+      </nav>
+    </div>
+  </footer>
+
+  <a href="https://wa.me/994502520216" class="wa" target="_blank" rel="noopener" aria-label="WhatsApp">
+    <svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.3 14.2c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.1-4.5-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.8s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2.1.4 0 .5l-.4.6-.3.4c-.1.1-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.3 2.4 1.5.3.1.5.1.7-.1l.9-1.1c.2-.3.4-.2.7-.1l1.9.9c.3.1.5.2.5.3.1.2.1.7-.1 1.4z"/></svg>
+  </a>
+
+  <script src="script.js"></script>
+</body>
+</html>
