@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="az">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script>try{var t=localStorage.getItem("dk-theme")||(matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light");document.documentElement.dataset.theme=t}catch(e){document.documentElement.dataset.theme="light"}</script>
+  <script>(function(){var d=document.documentElement;if(!/[?&]intro=0/.test(location.search)&&!matchMedia("(prefers-reduced-motion: reduce)").matches){d.classList.add("is-loading");setTimeout(function(){d.classList.remove("is-loading")},2500)}})()</script>
+  <title>Kaminlər — Deluxe Kamin</title>
+  <meta name="description" content="Elektrik, qaz, odunlu, bioetanol və bağ kaminləri, mərmər portallar və baca sistemləri. Rəsmi zəmanət, quraşdırma və servis. Deluxe Kamin, Bakı.">
+  <link rel="icon" href="https://deluxekamin.com/wp-content/uploads/2022/03/cropped-favicon-1-32x32.png">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body data-page="kaminler" class="store-page">
+
+  <main>
+    <!-- Mağaza başlığı -->
+    <section class="st-head st-head--compact">
+      <div class="wrap st-head__grid">
+        <h1 class="st-title">Kaminlər</h1>
+        <p class="st-tag">Növə, brendə və istehsal ölkəsinə görə seçin. Hər modelin səhifəsində ölçülər, qiymətlər və texniki göstəricilər var.</p>
+      </div>
+    </section>
+
+    <!-- Kateqoriyalar -->
+    <section class="chiclets">
+      <div class="chiclets__row" id="chiclets"></div>
+    </section>
+
+    <!-- Bütün modellər -->
+    <section class="st-all" id="kataloq">
+      <div class="wrap cat">
+        <aside class="cat__side" id="catSide" aria-label="Filtrlər">
+          <div class="cat__sheet">
+            <div class="cat__sheet-head"><b>Filtrlər</b><button type="button" class="cat__x" data-drawer-close aria-label="Bağla">×</button></div>
+            <label class="search cat__search">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg>
+              <input type="search" id="q" placeholder="Model axtar" aria-label="Model axtar">
+            </label>
+            <div id="facets"></div>
+            <button type="button" class="cat__reset" id="facetReset" hidden>Filtrləri sıfırla</button>
+            <button type="button" class="btn cat__apply" data-drawer-close><span><b id="filterApplyN">0</b> modeli göstər</span></button>
+          </div>
+          <div class="cat__dim" data-drawer-close></div>
+        </aside>
+        <div class="cat__main">
+          <div class="cat__bar">
+            <button type="button" class="cat__filterbtn" id="filterBtn">Filtrlər <b id="filterBtnN"></b></button>
+            <p class="cat__count"><b id="count">0</b> model</p>
+            <div class="sel"><select id="sort" aria-label="Sıralama"><option value="rec">Tövsiyə olunan</option><option value="price">Qiymət: əvvəlcə ucuz</option><option value="az">Ad: A–Z</option></select></div>
+          </div>
+          <div class="pills" id="pills" hidden></div>
+          <div class="grid" id="grid"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Kömək -->
+    <section class="helpstrip">
+      <div class="wrap helpstrip__row">
+        <a class="helpstrip__item" href="https://wa.me/994502520216" target="_blank" rel="noopener"><b>Seçimdə kömək lazımdır?</b><span>Məkanınızın şəklini göndərin, uyğun modelləri təklif edək. ›</span></a>
+        <a class="helpstrip__item" href="index.html#showroom"><b>Showroom-a gəlin</b><span>Azadlıq prospekti 140/33, Gənclik. ›</span></a>
+        <a class="helpstrip__item" href="baca-sistemleri.html"><b>Baca lazımdır?</b><span>Diametr və hündürlüyü kaminin gücünə görə hesablayırıq. ›</span></a>
+      </div>
+    </section>
+  </main>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="assets/js/data.js"></script>
+  <script src="assets/js/details.js"></script>
+  <script src="assets/js/i18n.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/kaminler.js"></script>
+</body>
+</html>
