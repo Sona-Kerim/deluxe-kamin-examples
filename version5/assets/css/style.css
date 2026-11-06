@@ -1104,3 +1104,220 @@ a, a:hover { text-decoration: none !important; }
   .fp--show h2 { font-size: 32px; }
   .fp--plain { padding: 56px 20px; }
 }
+
+/* =====================================================================
+   Dizayner rəyindən sonra düzəlişlər
+   ===================================================================== */
+/* düymələr: bir dil — pill, parıltısız */
+.btn { border-radius: 980px; }
+.btn::after { display: none !important; }
+.btn:hover { box-shadow: none; }
+
+/* naviqasiya: oxunaqlı, aktiv səhifə qalın (qırmızı yox) */
+.nav__link { font-size: 14px; color: var(--fg); opacity: .82; }
+.nav__item:hover > .nav__link { opacity: 1; }
+.nav__item.is-active > .nav__link { color: var(--fg) !important; opacity: 1; font-weight: 600; }
+
+/* hero hər iki rejimdə tünd qalır — alov ən güclü element olaraq qalsın */
+.x3d { --bg: #0a0a0b; --fg: #f5f5f7; --fg-2: #a1a1a6; --muted: #6e6e73; --line: rgba(255,255,255,.12); background: #0a0a0b; color: #f5f5f7; }
+.x3d .arrow-link { color: #f5f5f7; }
+.x3d__stage::before { display: none !important; }
+.x3d__hint i { display: none; }
+.x3d__title { font-size: clamp(44px, 4.6vw, 76px); letter-spacing: -.03em; }
+.x3d__call span { display: none; }
+@media (min-width: 1000px) {
+  .x3d__intro { width: min(46%, 660px); }
+  .x3d__call { max-width: 240px; }
+  .x3d__call--l { left: auto; right: calc(50% + 290px); text-align: right; }
+  .x3d__call--r { right: auto; left: calc(50% + 340px); text-align: left; }
+}
+
+/* foto plitələr: düymə kontrastı */
+.fp::before { background: linear-gradient(180deg, rgba(0,0,0,.55) 0%, rgba(0,0,0,0) 46%); }
+.pb--2 { background: rgba(0,0,0,.28); box-shadow: none; -webkit-backdrop-filter: blur(12px); backdrop-filter: blur(12px); }
+.pb--2:hover { background: #fff; color: #1d1d1f; }
+.fp--light::before { background: linear-gradient(180deg, rgba(255,255,255,.85) 0%, rgba(255,255,255,0) 38%); }
+.fp--light .pb--2 { background: rgba(255,255,255,.85); color: #7a1e22; box-shadow: none; }
+.fp--light .pb--2:hover { background: #7a1e22; color: #fff; }
+
+/* məhsul plitəsi (ağ fonda məhsul) */
+.fp--product { background: #fff; color: #1d1d1f; min-height: 780px; }
+.fp--product::before { display: none; }
+.fp--product .pb--1 { background: #7a1e22; color: #fff; }
+.fp--product .pb--1:hover { background: #5c1519; }
+.fp--product .pb--2 { background: transparent; color: #7a1e22; box-shadow: inset 0 0 0 1px #7a1e22; -webkit-backdrop-filter: none; backdrop-filter: none; }
+.fp--product .pb--2:hover { background: #7a1e22; color: #fff; }
+.fp__prod { margin-top: auto; padding-top: 40px; width: auto; max-width: 92%; height: 400px; flex-shrink: 0; object-fit: contain; mix-blend-mode: multiply; }
+
+/* haqqımızda: kart yox, bir cümlə */
+.fp--plain#haqqimizda h2 { max-width: 20ch; font-size: clamp(32px, 3.6vw, 52px); }
+.fp__line { margin-top: 22px !important; font-size: 19px !important; color: var(--fg-2) !important; max-width: none !important; }
+.fp__phone { margin-top: 26px !important; font-size: 24px !important; font-weight: 600; line-height: 1.35; color: var(--fg) !important; }
+.fp__mail { margin-top: 8px !important; font-size: 17px !important; }
+.fp__phone a:hover, .fp__mail a:hover { color: var(--accent); }
+
+/* mağaza kartları: brend başlıqdan sonra, sakit boz mətn */
+.sc__top { display: flex; flex-direction: column; }
+.sc__eyebrow { order: 2; margin: 6px 0 0; font-size: 14px; font-weight: 400; letter-spacing: 0; text-transform: none; color: var(--muted); }
+.sc__sub { order: 3; margin-top: 2px; }
+.shelf__h { color: var(--fg); }
+.shelf__sub { margin-top: 6px; font-size: 17px; color: var(--fg-2); }
+.st-tag { color: var(--fg-2); }
+
+@media (max-width: 860px) {
+  .fp--product { min-height: 560px; }
+  .fp__prod { height: 300px; }
+}
+
+/* dil seçimi */
+.lang { display: flex; gap: 2px; padding: 3px; border-radius: 980px; background: var(--surface-2); flex-shrink: 0; margin-right: 6px; }
+.lang button { font-size: 12px; font-weight: 600; letter-spacing: .02em; padding: 5px 9px; border-radius: 980px; color: var(--fg-2); transition: background .2s, color .2s; }
+.lang button:hover { color: var(--fg); }
+.lang button.is-on { background: var(--bg); color: var(--fg); box-shadow: 0 1px 3px rgba(0,0,0,.12); }
+.lang--m { display: none; }
+@media (max-width: 1000px) {
+  .hdr .lang:not(.lang--m) { display: none; }
+  .lang--m { display: inline-flex; margin: 24px 0 0; }
+  .lang--m button { font-size: 15px; padding: 8px 16px; }
+}
+.fp--plain .pb--2 { background: transparent; -webkit-backdrop-filter: none; backdrop-filter: none; color: var(--accent); box-shadow: inset 0 0 0 1px var(--accent); }
+.fp--plain .pb--2:hover { background: var(--accent); color: #fff; }
+
+/* =====================================================================
+   Deluxe fərqi — altı iş, bir əlaqə
+   ===================================================================== */
+.diff { padding: clamp(56px, 6vw, 80px) 0 0; }
+.diff__box { background: var(--surface); border-radius: 28px; padding: clamp(40px, 6vw, 80px) clamp(20px, 5vw, 72px); text-align: center; overflow: hidden; }
+.diff__h { font: 600 clamp(32px, 4vw, 56px)/1.06 var(--font); letter-spacing: -.03em; max-width: 16ch; margin: 0 auto; }
+.diff__sub { margin: 16px auto 0; max-width: 46ch; font-size: 19px; line-height: 1.4; color: var(--fg-2); }
+.diff__seg { position: relative; display: inline-flex; margin-top: 32px; padding: 4px; border-radius: 980px; background: var(--surface-2); }
+.diff__seg button { position: relative; z-index: 1; font-size: 15px; font-weight: 500; padding: 10px 20px; border-radius: 980px; color: var(--fg-2); transition: color .35s; }
+.diff__seg button.is-on { color: var(--fg); }
+.diff__seg i { position: absolute; z-index: 0; top: 4px; bottom: 4px; left: 4px; width: calc(50% - 4px); border-radius: 980px; background: var(--bg); box-shadow: 0 2px 8px rgba(0,0,0,.08); transition: transform .5s var(--ease-out); }
+.diff__seg.to-one i { transform: translateX(100%); }
+
+.diff__stage { position: relative; max-width: 620px; margin: 44px auto 0; text-align: left; }
+.diff__head { display: flex; align-items: center; justify-content: space-between; gap: 16px; background: var(--bg); border-radius: 22px 22px 0 0; padding: 0 26px; height: 0; opacity: 0; overflow: hidden; transition: height .6s var(--ease-out), opacity .4s, padding .6s var(--ease-out); }
+.diff__head img { height: 30px; width: auto; }
+.diff__head a { font-size: 20px; font-weight: 600; letter-spacing: -.01em; color: var(--accent); }
+.diff__list { display: flex; flex-direction: column; gap: 14px; transition: gap .6s var(--ease-out); }
+.diff__list li { position: relative; display: flex; align-items: baseline; justify-content: space-between; gap: 18px; padding: 18px 26px; background: var(--bg); border-radius: 18px;
+  transition: transform .7s var(--ease-out), border-radius .6s var(--ease-out), box-shadow .6s, padding .6s var(--ease-out); transition-delay: calc(var(--i) * 45ms); }
+.diff__list b { font-size: 17px; font-weight: 600; }
+.diff__who, .diff__ok { font-size: 15px; text-align: right; transition: opacity .35s; }
+.diff__who { color: var(--muted); }
+.diff__ok { position: absolute; right: 26px; color: var(--accent); opacity: 0; }
+
+/* dağınıq: hər iş ayrı kart, ayrı adam */
+.diff__stage.is-many .diff__list li { box-shadow: 0 6px 20px -10px rgba(0,0,0,.18); }
+.diff__stage.is-many .diff__list li:nth-child(1) { transform: translateX(-22px) rotate(-1.6deg); }
+.diff__stage.is-many .diff__list li:nth-child(2) { transform: translateX(26px) rotate(1.2deg); }
+.diff__stage.is-many .diff__list li:nth-child(3) { transform: translateX(-12px) rotate(.8deg); }
+.diff__stage.is-many .diff__list li:nth-child(4) { transform: translateX(30px) rotate(-1.1deg); }
+.diff__stage.is-many .diff__list li:nth-child(5) { transform: translateX(-28px) rotate(1.5deg); }
+.diff__stage.is-many .diff__list li:nth-child(6) { transform: translateX(14px) rotate(-.7deg); }
+
+/* bir komanda: kartlar birləşir */
+.diff__stage.is-one .diff__head { height: 76px; opacity: 1; }
+.diff__stage.is-one .diff__list { gap: 0; }
+.diff__stage.is-one .diff__list li { transform: none; border-radius: 0; box-shadow: none; padding: 15px 26px; }
+.diff__stage.is-one .diff__list li:last-child { border-radius: 0 0 22px 22px; padding-bottom: 24px; }
+.diff__stage.is-one .diff__who { opacity: 0; }
+.diff__stage.is-one .diff__ok { opacity: 1; }
+
+.diff__count { margin-top: 26px; text-align: center; font-size: 15px; color: var(--muted); position: relative; height: 1.4em; }
+.diff__count span { position: absolute; left: 0; right: 0; transition: opacity .4s; }
+.diff__c-one { opacity: 0; color: var(--fg); font-weight: 500; }
+.diff__stage.is-one .diff__c-one { opacity: 1; }
+.diff__stage.is-one .diff__c-many { opacity: 0; }
+
+@media (max-width: 640px) {
+  .diff__list li { flex-direction: column; gap: 4px; padding: 16px 20px; }
+  .diff__who, .diff__ok { text-align: left; }
+  .diff__ok { position: static; display: none; }
+  .diff__stage.is-one .diff__who { display: none; }
+  .diff__stage.is-one .diff__ok { display: block; }
+  .diff__stage.is-many .diff__list li { transform: rotate(-.8deg) !important; }
+  .diff__stage.is-many .diff__list li:nth-child(even) { transform: rotate(.8deg) !important; }
+}
+/* scroll ilə: başlıq görünür, kartlar bir-bir yerinə oturur */
+.diff__stage.has-head .diff__head { height: 76px; opacity: 1; }
+.diff__list li { transition-delay: 0s; }
+.diff__stage .diff__list li.in { transform: none !important; box-shadow: none; }
+.diff__stage .diff__list li.in .diff__who { opacity: 0; }
+.diff__stage .diff__list li.in .diff__ok { opacity: 1; }
+.diff__stage.is-many .diff__list li.in { border-radius: 10px; }
+@media (max-width: 640px) {
+  .diff__stage .diff__list li.in .diff__who { display: none; }
+  .diff__stage .diff__list li.in .diff__ok { display: block; }
+}
+
+/* Deluxe fərqi — scroll hekayəsi (GSAP idarə edir) */
+.diff--scrub .diff__box { text-align: left; }
+.diff__grid { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 6fr); gap: clamp(32px, 5vw, 80px); align-items: center; }
+.diff--scrub .diff__cap { position: relative; min-height: 3.2em; font-size: clamp(20px, 1.8vw, 26px); line-height: 1.3; font-weight: 500; letter-spacing: -.015em; color: var(--fg-2); }
+.diff--scrub .diff__cap span { position: absolute; left: 0; right: 0; top: 0; }
+.diff__num { display: flex; align-items: baseline; gap: 14px; margin: 18px 0 8px; }
+.diff__num b { font-size: clamp(110px, 13vw, 190px); line-height: .9; font-weight: 700; letter-spacing: -.06em; color: var(--fg); font-variant-numeric: tabular-nums; min-width: .7em; }
+.diff__num span { font-size: clamp(24px, 2.4vw, 34px); font-weight: 600; color: var(--muted); }
+.diff--scrub .diff__h { margin: 12px 0 0; max-width: 14ch; font-size: clamp(28px, 3vw, 42px); color: var(--accent); }
+.diff--scrub .diff__stage { margin: 0; max-width: none; }
+.diff--scrub .diff__list li, .diff--scrub .diff__head, .diff--scrub .diff__who, .diff--scrub .diff__ok { transition: none !important; }
+.diff--scrub .diff__list li { box-shadow: 0 8px 22px -12px rgba(0,0,0,.22); }
+.diff--scrub .diff__head { height: 76px; }
+
+/* animasiyasız: son vəziyyət */
+.diff__box.is-final .diff__c1, .diff__box.is-final .diff__who { display: none; }
+.diff__box.is-final .diff__ok { opacity: 1; }
+.diff__box.is-final .diff__list { gap: 0; }
+.diff__box.is-final .diff__list li { border-radius: 0; box-shadow: none; }
+.diff__box.is-final .diff__list li:last-child { border-radius: 0 0 22px 22px; }
+
+@media (max-width: 860px) {
+  .diff__grid { grid-template-columns: 1fr; gap: 20px; }
+  .diff__num { margin: 6px 0 0; }
+  .diff__num b { font-size: 88px; }
+  .diff--scrub .diff__h { font-size: 24px; }
+  .diff--scrub .diff__cap { font-size: 18px; min-height: 2.8em; }
+  .diff--scrub .diff__list li { padding: 12px 18px; }
+  .diff--scrub .diff__head { height: 60px; }
+}
+@media (max-width: 640px) {
+  .diff--scrub .diff__list li { flex-direction: row; align-items: center; gap: 10px; }
+  .diff--scrub .diff__list b { font-size: 15px; max-width: 55%; }
+  .diff--scrub .diff__who, .diff--scrub .diff__ok { display: block !important; font-size: 13px; text-align: right; }
+  .diff--scrub .diff__ok { position: absolute; right: 18px; max-width: 42%; }
+}
+
+/* Deluxe fərqi — birinci hissə başqa şirkətlər (solğun), ikinci hissə biz (bordo) */
+.diff--scrub .diff__box { transition: background-color .9s var(--ease); }
+.diff--scrub .diff__cap, .diff--scrub .diff__num b, .diff--scrub .diff__num span, .diff--scrub .diff__h { transition: color .9s var(--ease); }
+.diff--scrub .diff__num b { color: var(--muted); }
+.diff--scrub .diff__list li { background: var(--surface-2); transition: background-color .8s var(--ease) !important; }
+.diff--scrub .diff__list li b { color: var(--muted); font-weight: 500; transition: color .8s var(--ease); }
+.diff--scrub .diff__head { background: #fff; transition: none !important; }
+.diff--scrub .diff__head img { filter: none; }
+
+.diff__box.is-ours { background: #7a1e22; }
+.diff__box.is-ours .diff__cap { color: rgba(255, 255, 255, .88); }
+.diff__box.is-ours .diff__num b { color: #fff; }
+.diff__box.is-ours .diff__num span { color: rgba(255, 255, 255, .7); }
+.diff__box.is-ours .diff__h { color: #fff; }
+.diff__box.is-ours .diff__list li { background: #fff; }
+.diff__box.is-ours .diff__list li b { color: #1d1d1f; font-weight: 600; }
+.diff__box.is-ours .diff__ok { color: #7a1e22; }
+.diff__box.is-ours .diff__head a { color: #7a1e22; }
+
+/* animasiyasız rejimdə də son vəziyyət bizim rəngimizdə */
+.diff__box.is-final { background: #7a1e22; }
+.diff__box.is-final .diff__cap, .diff__box.is-final .diff__num b, .diff__box.is-final .diff__h { color: #fff; }
+.diff__box.is-final .diff__list li { background: #fff; }
+.diff__box.is-final .diff__list li b { color: #1d1d1f; }
+.diff--scrub .diff__cap { min-height: 4.1em; }
+
+/* ana səhifədə: foto-plitələrlə eyni ölçüdə tam plitə */
+.diff--tile { padding: 0; }
+.diff--tile .diff__box { border-radius: 0; min-height: 680px; display: flex; align-items: center; padding: 72px clamp(24px, 6vw, 96px); }
+.diff--tile .diff__grid { width: 100%; max-width: 1180px; margin: 0 auto; }
+@media (max-width: 860px) { .diff--tile .diff__box { min-height: 0; padding: 48px 20px; } }
+.diff__box.is-final .diff__head { opacity: 1; height: 76px; }
