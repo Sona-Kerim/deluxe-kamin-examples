@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="az">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Deluxe Kamin — Heat Lab</title>
+  <meta name="description" content="Kamin və baca sistemləri: istilik kalkulyatoru, baca konfiqurator və 17 dünya brendi. Deluxe Kamin, 1997-ci ildən.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@300;400;600;800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="hdr" id="hdr">
+    <a href="#" class="brand"><span class="brand__dot"></span>DELUXE<b>/KAMİN</b></a>
+    <nav class="menu" id="menu">
+      <a href="#katalog">Kataloq</a>
+      <a href="#kalkulyator">Kalkulyator</a>
+      <a href="#baca">Baca konfiqurator</a>
+      <a href="#brendler">Brendlər</a>
+      <a href="#elaqe">Əlaqə</a>
+    </nav>
+    <a href="tel:+994502520216" class="pill pill--fire">050 252 02 16</a>
+    <button class="menu-btn" id="menuBtn" aria-label="Menyu"><span></span><span></span><span></span></button>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero" id="hero">
+    <canvas id="fire" class="hero__fire" aria-hidden="true"></canvas>
+    <div class="hero__grid" aria-hidden="true"></div>
+    <div class="hero__content">
+      <div class="hero__meta mono"><span>EST. 1997</span><span>ISO 9001</span><span>BAKI · TÜRKİYƏ</span></div>
+      <h1 class="hero__title">
+        <span class="line">KAMİN.</span>
+        <span class="line line--stroke">BACA.</span>
+        <span class="line line--fire">İSTİLİK.</span>
+      </h1>
+      <div class="hero__bottom">
+        <p>Alovu idarə edirik. Dünyanın 17 aparıcı brendi, mühəndislik hesablamalı baca sistemləri və açar-təslim quraşdırma.</p>
+        <div class="hero__links">
+          <a href="#kalkulyator" class="qlink"><span class="mono">01</span>İstilik hesabla</a>
+          <a href="#baca" class="qlink"><span class="mono">02</span>Baca qur</a>
+          <a href="#katalog" class="qlink"><span class="mono">03</span>Kataloq</a>
+        </div>
+      </div>
+    </div>
+    <p class="hero__hint mono">↯ siçanı hərəkət etdirin, alov güclənir</p>
+  </section>
+
+  <!-- BENTO CATALOG -->
+  <section class="sec" id="katalog">
+    <div class="sec__head">
+      <span class="tag mono">[ KATALOQ ]</span>
+      <h2 class="h2">Hər yanacaq.<br>Hər <span class="fire-text">üslub.</span></h2>
+    </div>
+    <div class="bento">
+      <a href="#" class="bx bx--a up">
+        <span class="bx__n mono">01 / ELEKTRİK</span>
+        <div class="bx__art bx__art--electric"><i></i><i></i><i></i><i></i><i></i></div>
+        <h3>Elektrik kaminlər</h3>
+        <p>Baca yoxdur, quraşdırma bir saat. 3D alov effekti.</p>
+        <span class="bx__brands mono">DIMPLEX · FLAMELINE · SPARTHERM DRU</span>
+      </a>
+      <a href="#" class="bx bx--b up">
+        <span class="bx__n mono">02 / QAZ</span>
+        <h3>Qaz kaminlər</h3>
+        <p>Maxitrol pultlu təhlükəsizlik sistemi.</p>
+        <span class="bx__brands mono">ITALKERO · MAJESTIC</span>
+      </a>
+      <a href="#" class="bx bx--c up">
+        <span class="bx__n mono">03 / ODUNLU</span>
+        <h3>Odunlu kaminlər</h3>
+        <p>Maksimum istilik, klassik atmosfer.</p>
+        <span class="bx__brands mono">SPARTHERM · INVICTA · ARKIANE</span>
+      </a>
+      <a href="#" class="bx bx--d up">
+        <span class="bx__n mono">04 / BIO</span>
+        <h3>Bioetanol</h3>
+        <p>Tüstüsüz. Ekoloji.</p>
+        <span class="bx__brands mono">PLANIKA</span>
+      </a>
+      <a href="#" class="bx bx--e up">
+        <span class="bx__n mono">05 / OUTDOOR</span>
+        <h3>Bağ kaminləri</h3>
+        <p>Terras və həyət üçün.</p>
+      </a>
+      <a href="#" class="bx bx--f up">
+        <span class="bx__n mono">06 / PORTAL</span>
+        <h3>Mərmər portallar</h3>
+        <p>Fərdi ölçüdə Deluxe portallar və Comex aksesuarları.</p>
+      </a>
+    </div>
+  </section>
+
+  <!-- CALCULATOR -->
+  <section class="sec sec--panel" id="kalkulyator">
+    <div class="sec__head">
+      <span class="tag mono">[ İSTİLİK KALKULYATORU ]</span>
+      <h2 class="h2">Neçə kW <span class="fire-text">lazımdır?</span></h2>
+    </div>
+    <div class="calc up">
+      <div class="calc__controls">
+        <div class="field">
+          <div class="field__top"><label for="area">Otağın sahəsi</label><output class="mono" id="areaOut">40 m²</output></div>
+          <input type="range" id="area" min="10" max="200" value="40" step="5">
+        </div>
+        <div class="field">
+          <div class="field__top"><label for="height">Tavan hündürlüyü</label><output class="mono" id="heightOut">2.8 m</output></div>
+          <input type="range" id="height" min="2.4" max="5" value="2.8" step="0.1">
+        </div>
+        <div class="field">
+          <div class="field__top"><label>İzolyasiya</label></div>
+          <div class="seg" id="insul">
+            <button data-k="0.8">Yaxşı</button>
+            <button data-k="1" class="is-on">Orta</button>
+            <button data-k="1.25">Zəif</button>
+          </div>
+        </div>
+      </div>
+      <div class="calc__result">
+        <span class="mono calc__label">TÖVSİYƏ OLUNAN GÜC</span>
+        <div class="calc__value"><span id="kw">4.5</span><small>kW</small></div>
+        <div class="gauge"><span id="gauge"></span></div>
+        <p class="mono calc__label">UYĞUN KAMİNLƏR</p>
+        <div class="calc__recs" id="recs"></div>
+        <p class="calc__note">* Hesablama təxminidir. Dəqiq layihə üçün mütəxəssisimiz yerində ölçü aparır.</p>
+        <button class="pill pill--fire" id="calcSend">Nəticəni göndər, təklif al →</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- BACA CONFIGURATOR -->
+  <section class="sec" id="baca">
+    <div class="sec__head">
+      <span class="tag mono">[ BACA KONFİQURATOR ]</span>
+      <h2 class="h2">Bacanızı <span class="fire-text">qurun.</span></h2>
+      <p class="sec__lead">Baca kaminin mühərrikidir: çəkişi, təhlükəsizliyi və effektivliyi o müəyyən edir. Parametrləri seçin, sistemi canlı görün.</p>
+    </div>
+
+    <div class="cfg up">
+      <div class="cfg__controls">
+        <div class="field">
+          <div class="field__top"><label>Material</label></div>
+          <div class="seg" id="mat">
+            <button data-v="ceramic" class="is-on">Keramik</button>
+            <button data-v="steel">Paslanmaz polad</button>
+          </div>
+        </div>
+        <div class="field">
+          <div class="field__top"><label>Yerləşmə</label></div>
+          <div class="seg" id="loc">
+            <button data-v="inside" class="is-on">Bina daxili</button>
+            <button data-v="facade">Fasad</button>
+          </div>
+        </div>
+        <div class="field">
+          <div class="field__top"><label for="chH">Baca hündürlüyü</label><output class="mono" id="chHOut">8 m</output></div>
+          <input type="range" id="chH" min="4" max="15" value="8" step="0.5">
+        </div>
+        <div class="field">
+          <div class="field__top"><label>Daxili diametr</label></div>
+          <div class="seg seg--4" id="dia">
+            <button data-v="150">Ø150</button>
+            <button data-v="180">Ø180</button>
+            <button data-v="200" class="is-on">Ø200</button>
+            <button data-v="250">Ø250</button>
+          </div>
+        </div>
+
+        <div class="cfg__summary">
+          <div><span class="mono">SİSTEM</span><b id="sSys">Schiedel keramik</b></div>
+          <div><span class="mono">UYĞUNDUR</span><b id="sFit">Odunlu kaset kaminlər</b></div>
+          <div class="cfg__status" id="sStatus"><span class="mono">ÇƏKİŞ</span><b>Optimal</b></div>
+        </div>
+        <button class="pill pill--fire" id="cfgSend">Bu konfiqurasiya üçün təklif al →</button>
+      </div>
+
+      <div class="cfg__stage">
+        <svg id="cfgSvg" viewBox="0 0 320 520" class="cfg__svg" aria-label="Baca vizualizasiyası">
+          <defs>
+            <pattern id="win" width="40" height="84" patternUnits="userSpaceOnUse" patternTransform="translate(0 80)">
+              <rect x="12" y="20" width="16" height="30" rx="2" class="win"/>
+            </pattern>
+          </defs>
+          <!-- ruler -->
+          <g id="ruler" class="ruler"></g>
+          <!-- building -->
+          <rect id="bld" x="40" y="300" width="160" height="200" class="bld"/>
+          <rect id="bldWin" x="40" y="300" width="160" height="200" fill="url(#win)"/>
+          <rect id="roof" x="34" y="294" width="172" height="8" class="roof"/>
+          <!-- fireplace + connector -->
+          <rect x="88" y="462" width="60" height="38" class="fp"/>
+          <rect x="98" y="472" width="40" height="28" class="fp-in"/>
+          <ellipse cx="118" cy="494" rx="12" ry="9" class="fp-glow"/>
+          <rect id="pipe" x="140" y="446" width="80" height="10" class="pipe"/>
+          <!-- chimney -->
+          <rect id="cOuter" class="c-outer"/>
+          <rect id="cInsul" class="c-insul"/>
+          <rect id="cLiner" class="c-liner"/>
+          <rect id="cCap" class="c-cap"/>
+          <g id="smoke" class="smoke"><circle r="6"/><circle r="7"/><circle r="5"/><circle r="8"/></g>
+          <!-- height marker -->
+          <line id="mk" x1="0" x2="290" class="marker"/>
+          <text id="mkTxt" x="292" class="marker-txt mono">8 m</text>
+          <line x1="0" y1="500" x2="320" y2="500" class="ground"/>
+        </svg>
+      </div>
+    </div>
+  </section>
+
+  <!-- STATS -->
+  <section class="stats">
+    <div class="stat up"><b class="mono" data-to="1997" data-plain>0</b><span>quruluş ili</span></div>
+    <div class="stat up"><b class="mono" data-to="17">0</b><span>rəsmi brend</span></div>
+    <div class="stat up"><b class="mono">ISO</b><span>9001 keyfiyyət</span></div>
+    <div class="stat up"><b class="mono" data-to="6">0</b><span>kamin kateqoriyası</span></div>
+  </section>
+
+  <!-- BRANDS -->
+  <section class="sec sec--tight" id="brendler">
+    <div class="sec__head"><span class="tag mono">[ DİSTRİBÜTORLUQ ]</span></div>
+    <div class="rail"><div class="rail__track">
+      <span>DIMPLEX</span><span>SPARTHERM</span><span>SCHIEDEL</span><span>PLANIKA</span><span>EXODRAFT</span><span>CINIER</span><span>FLAMELINE</span><span>JC BORDELET</span><span>INVICTA</span>
+      <span>DIMPLEX</span><span>SPARTHERM</span><span>SCHIEDEL</span><span>PLANIKA</span><span>EXODRAFT</span><span>CINIER</span><span>FLAMELINE</span><span>JC BORDELET</span><span>INVICTA</span>
+    </div></div>
+    <div class="rail rail--rev"><div class="rail__track">
+      <span>FABER</span><span>SOLINOX</span><span>MAXITROL</span><span>ITALKERO</span><span>TOTEM</span><span>A CAMINETTI</span><span>KRATKI</span><span>COMEX</span>
+      <span>FABER</span><span>SOLINOX</span><span>MAXITROL</span><span>ITALKERO</span><span>TOTEM</span><span>A CAMINETTI</span><span>KRATKI</span><span>COMEX</span>
+    </div></div>
+  </section>
+
+  <!-- BLOG -->
+  <section class="sec">
+    <div class="sec__head">
+      <span class="tag mono">[ BİLİK BAZASI ]</span>
+      <h2 class="h2">Oxuyun, <span class="fire-text">sonra seçin.</span></h2>
+    </div>
+    <div class="rows">
+      <a href="#" class="row up"><span class="mono">BACA</span><h3>Bacanın kamin sistemində rolu</h3><i>→</i></a>
+      <a href="#" class="row up"><span class="mono">BIO</span><h3>Biokamin nədir?</h3><i>→</i></a>
+      <a href="#" class="row up"><span class="mono">ELEKTRİK</span><h3>Elektrik kaminlərin üstünlükləri</h3><i>→</i></a>
+      <a href="#" class="row up"><span class="mono">ƏSASLAR</span><h3>Kamin nədir?</h3><i>→</i></a>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta" id="elaqe">
+    <h2 class="cta__title up">DANIŞAQ<span class="fire-text">?</span></h2>
+    <div class="cta__grid up">
+      <a href="tel:+994124494130"><span class="mono">OFİS</span>012 449 41 30</a>
+      <a href="tel:+994502520216"><span class="mono">MOBİL</span>050 252 02 16</a>
+      <a href="https://wa.me/994502520216" target="_blank" rel="noopener"><span class="mono">WHATSAPP</span>Yazın →</a>
+    </div>
+  </section>
+
+  <footer class="ftr mono">
+    <span>© 2004–2026 DELUXE KAMİN &amp; PERİLA</span>
+    <nav>
+      <a href="https://www.instagram.com/deluxe_kamin_perila_kovka" target="_blank" rel="noopener">IG</a>
+      <a href="https://www.facebook.com/deluxekaminperilakovka" target="_blank" rel="noopener">FB</a>
+      <a href="https://www.youtube.com/@deluxekaminperilakovka" target="_blank" rel="noopener">YT</a>
+      <a href="https://www.linkedin.com/company/deluxekamin" target="_blank" rel="noopener">IN</a>
+    </nav>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
