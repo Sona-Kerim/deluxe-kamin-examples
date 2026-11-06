@@ -1047,3 +1047,60 @@ a, a:hover { text-decoration: none !important; }
   *, *::before, *::after { animation: none !important; transition-duration: .01ms !important; }
   html { scroll-behavior: auto; }
 }
+
+/* =====================================================================
+   Ana səhifə — foto-plitələr (Apple ana səhifəsi ritmi)
+   ===================================================================== */
+.ptiles { background: var(--bg); padding-bottom: 12px; }
+.ptiles__stack { display: grid; gap: 12px; padding: 12px 12px 0; }
+.ptiles__grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; padding: 12px 12px 0; }
+.fp { position: relative; overflow: hidden; isolation: isolate; min-height: 620px; padding: 56px 24px 40px; display: flex; flex-direction: column; align-items: center; text-align: center; color: #fff; background: #111112; border-radius: 0; }
+.fp > img { position: absolute; inset: 0; z-index: -2; width: 100%; height: 100%; object-fit: cover; will-change: transform; }
+.fp::before { content: ""; position: absolute; inset: 0; z-index: -1; background: linear-gradient(180deg, rgba(0,0,0,.5) 0%, rgba(0,0,0,0) 44%); pointer-events: none; }
+.fp--light { color: #1d1d1f; background: #f5f5f7; }
+.fp--light::before { background: linear-gradient(180deg, rgba(255,255,255,.8) 0%, rgba(255,255,255,0) 44%); }
+.fp--hero { min-height: 760px; }
+.fp h2 { font: 600 48px/1.07 var(--font); letter-spacing: -.02em; }
+.fp--hero h2 { font-size: 60px; }
+.fp > p { margin-top: 8px; font-size: 24px; line-height: 1.2; letter-spacing: .004em; max-width: 30ch; }
+.ptiles__grid .fp { min-height: 580px; }
+.ptiles__grid .fp h2 { font-size: 40px; }
+.ptiles__grid .fp > p { font-size: 21px; }
+.fp__ctas { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; margin-top: 20px; }
+.pb { font-size: 17px; line-height: 1; padding: 12px 22px; border-radius: 980px; transition: background .25s, color .25s, box-shadow .25s; }
+.pb--1 { background: #fff; color: #1d1d1f; }
+.pb--1:hover { background: rgba(255,255,255,.85); }
+.pb--2 { color: #fff; box-shadow: inset 0 0 0 1px #fff; }
+.pb--2:hover { background: #fff; color: #1d1d1f; }
+.fp--light .pb--1, .fp--plain .pb--1 { background: var(--btn); color: #fff; }
+.fp--light .pb--1:hover, .fp--plain .pb--1:hover { background: var(--btn-hover); }
+.fp--light .pb--2 { color: #7a1e22; box-shadow: inset 0 0 0 1px #7a1e22; }
+.fp--light .pb--2:hover { background: #7a1e22; color: #fff; }
+
+/* şəkilsiz plitələr — rejimə uyğun */
+.fp--plain { min-height: 0; color: var(--fg); background: var(--surface); padding: 72px 24px; }
+.fp--plain::before { display: none; }
+.fp--plain .pb--2 { color: var(--accent); box-shadow: inset 0 0 0 1px var(--accent); }
+.fp--plain .pb--2:hover { background: var(--accent); color: #fff; }
+.fp--plain > p { color: var(--fg-2); }
+.fp__note { margin-top: 30px !important; font-size: 15px !important; color: var(--muted) !important; max-width: 60ch !important; }
+.fp--show { text-align: left; align-items: stretch; }
+.fp__showin { width: 100%; max-width: 1080px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: center; }
+.fp--show h2 { font-size: 44px; }
+.fp--show p { margin-top: 10px; font-size: 19px; color: var(--fg-2); max-width: 36ch; }
+.fp--show .fp__ctas { justify-content: flex-start; }
+.fp__map { border-radius: 18px; overflow: hidden; aspect-ratio: 4 / 3; background: var(--bg); }
+.fp__map iframe { width: 100%; height: 100%; border: 0; display: block; }
+:root[data-theme="dark"] .fp__map iframe { filter: invert(.9) hue-rotate(180deg) brightness(.95); }
+
+@media (max-width: 860px) {
+  .ptiles__grid { grid-template-columns: 1fr; }
+  .fp, .ptiles__grid .fp { min-height: 520px; padding-top: 44px; }
+  .fp--hero { min-height: 620px; }
+  .fp h2, .ptiles__grid .fp h2 { font-size: 34px; }
+  .fp--hero h2 { font-size: 40px; }
+  .fp > p, .ptiles__grid .fp > p { font-size: 19px; }
+    .fp__showin { grid-template-columns: 1fr; gap: 32px; }
+  .fp--show h2 { font-size: 32px; }
+  .fp--plain { padding: 56px 20px; }
+}
