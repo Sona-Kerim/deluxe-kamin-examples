@@ -345,7 +345,7 @@
 
     var dark = false;
     function applyTheme() {
-      dark = true;   // hero hər iki rejimdə tünd fondadır
+      dark = document.documentElement.dataset.theme === 'dark';
       shadowPlane.material.opacity = dark ? 0.4 : 0.16;
       blob.material.opacity = dark ? 0.95 : 0.6;
       hemi.intensity = dark ? 0.18 : 0.35;
@@ -357,6 +357,7 @@
       steel.color.set(dark ? 0x1d1d20 : 0x141416);
     }
     applyTheme();
+    new MutationObserver(applyTheme).observe(document.documentElement, { attributes: true, attributeFilter: ['data-theme'] });
     
     /* ---------- Vəziyyət (scroll-dan gəlir) ---------- */
     var state = { p: 0 };
