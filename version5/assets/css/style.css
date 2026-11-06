@@ -1321,3 +1321,114 @@ a, a:hover { text-decoration: none !important; }
 .diff--tile .diff__grid { width: 100%; max-width: 1180px; margin: 0 auto; }
 @media (max-width: 860px) { .diff--tile .diff__box { min-height: 0; padding: 48px 20px; } }
 .diff__box.is-final .diff__head { opacity: 1; height: 76px; }
+
+/* =====================================================================
+   Kamin səhifəsi (kamin.html)
+   ===================================================================== */
+.pd__crumb { padding-top: 26px; font-size: 14px; color: var(--muted); }
+.pd__crumb a { color: var(--fg-2); }
+.pd__crumb a:hover { color: var(--accent); }
+.pd__top { display: grid; grid-template-columns: minmax(0, 7fr) minmax(0, 5fr); gap: clamp(28px, 4vw, 64px); align-items: start; padding-top: 22px; padding-bottom: clamp(48px, 6vw, 80px); }
+.pd__gallery { position: sticky; top: calc(var(--hdr) + 20px); }
+.pd__stage { position: relative; aspect-ratio: 4 / 3; border-radius: 22px; overflow: hidden; background: var(--surface); }
+.pd__stage img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0; transition: opacity .5s var(--ease); }
+.pd__stage img.is-on { opacity: 1; }
+.pd__nav { position: absolute; top: 50%; transform: translateY(-50%); width: 44px; height: 44px; border-radius: 50%; background: rgba(255,255,255,.88); color: #1d1d1f; font-size: 24px; line-height: 1; display: grid; place-items: center; box-shadow: 0 4px 16px rgba(0,0,0,.12); opacity: 0; transition: opacity .25s; }
+.pd__stage:hover .pd__nav, .pd__nav:focus-visible { opacity: 1; }
+.pd__nav--l { left: 14px; } .pd__nav--r { right: 14px; }
+.pd__thumbs { display: flex; gap: 10px; margin-top: 12px; overflow-x: auto; scrollbar-width: none; padding-bottom: 2px; }
+.pd__thumbs::-webkit-scrollbar { display: none; }
+.pd__thumbs button { flex: 0 0 76px; height: 58px; border-radius: 10px; overflow: hidden; opacity: .55; transition: opacity .2s, box-shadow .2s; background: var(--surface); }
+.pd__thumbs button.is-on { opacity: 1; box-shadow: 0 0 0 2px var(--fg); }
+.pd__thumbs img { width: 100%; height: 100%; object-fit: cover; }
+
+.pd__brand { font-size: 15px; color: var(--muted); }
+.pd__name { margin-top: 6px; font: 600 clamp(36px, 4vw, 56px)/1.04 var(--font); letter-spacing: -.03em; }
+.pd__sub { margin-top: 10px; font-size: 21px; line-height: 1.3; color: var(--fg-2); }
+.pd__price { margin-top: 26px; display: flex; align-items: baseline; gap: 10px; flex-wrap: wrap; }
+.pd__price b { font-size: 30px; font-weight: 600; letter-spacing: -.02em; }
+.pd__price b.pd__ask { font-size: 22px; color: var(--fg-2); }
+.pd__price span { font-size: 14px; color: var(--muted); }
+.pd__tags { margin-top: 6px; font-size: 15px; color: var(--muted); }
+.pd__variants { margin-top: 28px; }
+.pd__vh { font-size: 17px; font-weight: 600; margin-bottom: 12px; }
+.pd__vlist { display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; }
+.pd__vlist.is-many { max-height: 300px; overflow-y: auto; padding-right: 4px; }
+.pd__vlist button { display: flex; flex-direction: column; align-items: flex-start; gap: 2px; padding: 14px 16px; border-radius: 14px; background: var(--surface); text-align: left; box-shadow: inset 0 0 0 1.5px transparent; transition: box-shadow .2s, background .2s; }
+.pd__vlist button:hover { background: var(--surface-2); }
+.pd__vlist button.is-on { box-shadow: inset 0 0 0 2px var(--accent); background: var(--bg); }
+.pd__vlist span { font-size: 16px; font-weight: 600; }
+.pd__vlist small { font-size: 14px; color: var(--fg-2); }
+.pd__ctas { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 28px; }
+.pd__ctas .pb--1 { background: var(--btn); color: #fff; }
+.pd__ctas .pb--1:hover { background: var(--btn-hover); }
+.pd__ctas .pb--2 { background: transparent; color: var(--accent); box-shadow: inset 0 0 0 1px var(--accent); -webkit-backdrop-filter: none; backdrop-filter: none; }
+.pd__ctas .pb--2:hover { background: var(--accent); color: #fff; }
+.pd__assure { margin-top: 20px; font-size: 15px; color: var(--fg-2); }
+.pd__note { margin-top: 6px; font-size: 13px; color: var(--muted); }
+
+.pd__block { padding-top: clamp(40px, 5vw, 64px); }
+.pd__h { font: 600 clamp(28px, 3vw, 40px)/1.1 var(--font); letter-spacing: -.025em; }
+.pd__desc { margin-top: 16px; max-width: 62ch; font-size: 19px; line-height: 1.5; color: var(--fg-2); }
+.pd__feats { margin-top: 28px; display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; }
+.pd__feats li { background: var(--surface); border-radius: 18px; padding: 22px 24px; font-size: 18px; font-weight: 500; line-height: 1.35; }
+.pd__feats:empty { display: none; }
+.pd__specs { margin: 24px 0 0; display: grid; grid-template-columns: repeat(2, 1fr); gap: 8px 32px; }
+.pd__specs div { display: flex; justify-content: space-between; gap: 18px; padding: 14px 18px; border-radius: 12px; background: var(--surface); }
+.pd__specs dt { color: var(--fg-2); font-size: 15px; }
+.pd__specs dd { margin: 0; font-size: 15px; font-weight: 600; text-align: right; }
+.sc__price { order: 4; margin-top: 8px; font-size: 15px; font-weight: 600; color: var(--fg); }
+
+@media (max-width: 900px) {
+  .pd__top { grid-template-columns: 1fr; }
+  .pd__gallery { position: static; }
+  .pd__feats, .pd__specs { grid-template-columns: 1fr; }
+  .pd__nav { opacity: 1; width: 38px; height: 38px; }
+}
+
+/* İstehsal ölkəsinə görə */
+.countries { padding: clamp(40px, 5vw, 60px) 0 0; }
+.countries__row { display: flex; gap: 14px; overflow-x: auto; scrollbar-width: none; padding: 22px var(--edge) 8px; scroll-snap-type: x mandatory; scroll-padding-inline: var(--edge); }
+.countries__row::-webkit-scrollbar { display: none; }
+.ctry { flex: 0 0 220px; scroll-snap-align: start; display: flex; flex-direction: column; gap: 6px; padding: 22px 22px 20px; border-radius: 18px; background: var(--surface); transition: background .25s, transform .3s var(--ease-out); }
+.ctry:hover { background: var(--surface-2); transform: translateY(-2px); }
+.ctry b { font-size: 22px; font-weight: 600; letter-spacing: -.02em; }
+.ctry span { font-size: 15px; color: var(--fg-2); line-height: 1.35; }
+.ctry small { margin-top: auto; padding-top: 10px; font-size: 13px; color: var(--muted); }
+.mega { grid-template-columns: repeat(var(--cols, 4), minmax(0, 1fr)) 1.1fr; }
+.anchor { display: block; position: relative; top: calc(-1 * var(--hdr) - 20px); }
+
+/* filtr paneli: növ düymələri ayrıca sətirdə, hamısı görünür; filtrlər və axtarış ikinci sətirdə */
+.filters__inner { flex-wrap: wrap; row-gap: 12px; }
+.chips { flex: 1 1 100%; margin-right: 0; flex-wrap: wrap; gap: 8px; padding: 0; background: none; border-radius: 0; overflow: visible; }
+.chip { background: var(--surface-2); }
+.chip:hover { background: var(--line); }
+.chip.is-on, .chip.is-on:hover { background: var(--btn); color: #fff; }
+.filters__inner .search { margin-left: auto; }
+@media (max-width: 640px) {
+  .chips { flex-wrap: nowrap; overflow-x: auto; margin: 0 calc(-1 * var(--pad)); padding: 0 var(--pad); }
+  .filters__inner .search { margin-left: 0; flex: 1 1 100%; }
+  .filters__inner .search input { width: 100%; }
+}
+
+/* qısa giriş ekranı: yalnız loqo */
+.loader--quick { display: grid; place-items: center; background: var(--bg); }
+.loader--quick .loader__logo { width: clamp(140px, 16vw, 200px); height: auto; filter: var(--logo-filter); opacity: 0; }
+.x3d__sub { max-width: 52ch; line-height: 1.5; }
+
+/* əlaqə forması: ad, soyad, telefon, e-poçt, mövzu, mesaj */
+.ftr__form { grid-template-columns: 1fr 1fr; max-width: 760px; margin: 0 auto; }
+.ftr__form .field--wide, .ftr__form .ftr__send { grid-column: 1 / -1; }
+.field textarea { width: 100%; min-height: 128px; resize: vertical; border-radius: 14px; border: 0; background: var(--surface); color: var(--fg); font: 400 17px/1.45 var(--font); padding: 26px 16px 12px; outline: none; box-shadow: inset 0 0 0 1px var(--line); transition: box-shadow .2s; }
+.field textarea:focus { box-shadow: inset 0 0 0 1.5px var(--accent); }
+.field textarea:focus + label, .field textarea:not(:placeholder-shown) + label { transform: translateY(-10px); font-size: 12px; }
+.field.is-error input, .field.is-error textarea { box-shadow: inset 0 0 0 1.5px #d64550; }
+.ftr__send { display: flex; flex-wrap: wrap; align-items: center; gap: 12px; margin-top: 4px; }
+.ftr__send .btn { height: 52px; border-radius: 980px; padding: 0 26px; }
+.ftr__send .btn--line { color: var(--accent); box-shadow: inset 0 0 0 1px var(--accent); }
+.ftr__send .btn--line:hover { background: var(--accent); color: #fff; }
+.ftr__hint { font-size: 13px; color: var(--muted); margin-left: 4px; }
+@media (max-width: 640px) {
+  .ftr__form { grid-template-columns: 1fr; }
+  .ftr__send .btn { flex: 1 1 100%; }
+}
